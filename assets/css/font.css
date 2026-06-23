@@ -1,0 +1,30 @@
+/* assets/css/font.css */
+
+/* 프리탠다드 가변(varible) 폰트 섡언 */
+@font-face {
+    font-family: 'pretendard-VF';
+    src: url(../font/PretendardVariable.woff2) format(woff2-variations);
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* suit 가변(varible) 폰트 선언 */
+@font-face {
+    font-family: 'SUIT-VF';
+    src: url(../font/SUIT-Variable.woff2) format(woff2-variations);
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 웹사이트의 기본 본문 폰트 전체 선언 */
+body {
+    font-family: 'pretendard-VF',-apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* @theme {
+    --font-sans: 'pretendard-VF',-apple-system, sans-serif;
+} */
