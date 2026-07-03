@@ -51,11 +51,11 @@
                     <h2><span>창업</span></h2>
                     <ul class="">
                         <!-- h2를 클릭했을 때 나오는 toogleClass -->
-                        <li><a href="#">브랜드소개</a></li>
-                        <li><a href="#">브랜드경쟁력</a></li>
-                        <li><a href="#">창업경쟁력</a></li>
-                        <li><a href="#">창업안내</a></li>
-                        <li><a href="#">창업비용 및 문의</a></li>
+                        <li><a href="#brand">브랜드소개</a></li>
+                        <li><a href="#competi">브랜드경쟁력</a></li>
+                        <li><a href="#franchise">창업경쟁력</a></li>
+                        <li><a href="#guide">창업안내</a></li>
+                        <li><a href="#price">창업비용 및 문의</a></li>
                     </ul>
                     </div>
                     <button class="menu-btn ">
@@ -67,6 +67,53 @@
                 </div>
             </div>
         </header>
+        <script>
+            // querySelectorAll()
+            const menuBtn = document.querySelector(".menu-btn");
+            const moNaviBox = document.querySelector(".mo-navi-box");
+
+            
+            // menuBtn.addEventListener("click", function() {
+            //     console.log("클릭되었당")
+            // })
+            
+            // 화살표함수 add, remove, toggle
+            menuBtn.addEventListener("click", () => {
+                menuBtn.classList.toggle("is-open");
+                moNaviBox.classList.toggle("is-open");
+
+                if(menuBtn.classList.contains("is-open")) {
+                console.log("열려있어!")
+                }   else {
+                console.log("닫혀있어!")
+                }
+            })
+            
+
+            const h2 = document.querySelector(".mo-navi-box h2");
+            const ul = document.querySelector(".mo-navi-box ul");
+
+            h2.addEventListener("click", () => {
+                ul.classList.toggle("is-open");
+            })
+
+
+            // 모바일 네비 a를 클릭했을 때 moNaviBox가 is-open클래스 삭제 menuBtn .is-open클래스 삭제 , h2요소 is-open 삭제
+            const moNaviLink = document.querySelectorAll(".mo-navi-box ul a");
+            moNaviLink.forEach((link) => {
+                link.addEventListener("click",() =>{
+                    menuBtn.classList.remove("is-open");
+                    moNaviBox.classList.remove("is-open");
+                    ul.classList.remove("is-open");
+                })
+            })
+        </script>
+        <!-- 
+        menubtn.classList.add() - 클래스 추가만 함
+        menubtn.classList.remove() - 클래스 제거 함
+        menubtn.classList.toggle() - 있으면 제거, 없으면 추가함
+         menubtn.classList.replace("is-open", "is-closed") - 클래스를 다른걸로 바꿈
+        -->
         <main>
             <ul class="menu-wrap">
                 <li class="active"><a href="#brand">브랜드소개</a></li>
@@ -76,6 +123,8 @@
                     <li><a href="#price">창업비용 및 문의</a></li>
             </ul>
             <!-- 스크롤작업시 header가 사라진 후에 생성 -->
+
+            
             <section class="hero-sec heading scroll" id="brand">
                 <div class="txt-ani">
                     <div><strong>멈출수 없는 맛</strong></div>
@@ -110,6 +159,67 @@
                     <div class="num"><strong>0원</strong></div>
                 </div>
             </section>
+
+            <script>
+              const counter = (counterElement, max) => {
+                let now = max; // max에서 시작해서 0을 향해 줄어듦
+
+                // 30ms(0.03초)마다 반복실행
+                const handle = setInterval(() => {
+                    // 화면에 표시 (목표 - 남은 거리) = 지금까지 올라온 숫자
+                    // toLocaleString는 콤마찍어주는 함수
+                    counterElement.innerHTML = Math.ceil(max-now).toLocaleString() + "원";
+
+                    // 남은거리가 1보다 작아지면 = 거의 도착했으면
+                    if(now < 1) {
+                        clearInterval(handle); // 반복 멈추기
+                        // 마지막에 정확하게 목표값 맞추기
+                        counterElement.innerHTML = max.toLocaleString() + "원";
+                    }
+                    // 남은 거리 1/8만큼씩 이동 남은거리가 클수록 빠르고, 줄어들수록 작아짐
+                    const step = now / 8;
+                    now -= step;
+
+                }, 30)
+              }
+              
+            //   const numEl = document.querySelector(".num strong");
+            //   counter(numEl, 100_000_000);
+
+              // counterElement 숫자를 표시할 html요소
+              // max 최종 목표 숫자
+
+            // 스크롤이벤트
+            const startCountersOnScroll = () => {
+                const numSec = document.querySelector(".count-sec");
+                // count-sec이 문서 위에서 몇px떨어졌는지 측정 (고정값)
+                const numSecOffsetTop = numSec.offsetTop;
+                // 이미 실행했는지 체크하는 스위치
+                let started = false;
+                
+                // 스크롤 할 때마다 실행될 함수
+                const handleScroll = () => {
+                    // 지금 얼마나 스크롤했는지 측정(변하는 값)
+                    const scrollY = window.scrollY;
+                    if(scrollY >= numSecOffsetTop && !started) {
+                        const counterElement = document.querySelector(".num strong");
+                        counter(counterElement, 101184800);
+                        // 다시는 실행안함
+                        started = true;
+
+                        // 스크롤 이벤트 해제
+                        window.removeEventListener("scroll", handleScroll);
+                    }
+                };
+                // 스크롤 될때마다 handleScroll을 실행
+                window.addEventListener("scroll", handleScroll);
+            };
+            // 페이지가 완전히 로드된후 함수 실행
+            window.addEventListener('load', startCountersOnScroll);
+            </script>
+
+
+
             <!-- <div class="bg-sec"> 
                 <img src="img/s3_bg.jpg" alt="꾸블랙치킨">
             </div> -->
@@ -170,7 +280,7 @@
                       },
                     })
                 </script>
-                <section class="merit-sec pd" id="franchise">
+                <section class="merit-sec pd" id="franchise" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <div class="inner">
                         <div class="txt-box">
                             <h2 class="heading tit">
@@ -407,8 +517,7 @@
                                     </label>
                                     <!-- business box active toggle class -->
                                  <div class="business-box">
-                                        <input type="text" name="" id="" value="유입경로선택"
-                                    readonly>
+                                        <input type="text" name="" id="" value="유입경로선택" readonly>
                                     <img src="img/selectarrow.png" alt="">
                                     <ul class="business-select">
                                         <li class="">유입경로 선택</li>
@@ -427,7 +536,7 @@
                                     </label>
                                     <div class="toggle-group">
                                         <button type="button" class="toggle-btn active" data-value="option1">없음</button>
-                                        <button type="button" class="toggle-btn" data-value="option2">있음</button>
+                                        <button type="button" class="toggle-btn " data-value="option2">있음</button>
                                         <!-- <input type="hidden" id="category" name="category"
                                         value="opyion1"> -->
                                         <!-- 사용자가 선택했지만, 서버에는 뭘 선택했는지 모름 value에 선택값이 저장되면서 서버가 확인할 수 있음 -->
@@ -456,6 +565,54 @@
                     </div>
                 </section>
             </div>
+            <script>
+            const toggleBtns = document.querySelectorAll(".toggle-btn");
+            
+            // toggleBtns.forEach(btn => {})
+            
+            toggleBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    console.log("클릭된 버튼", btn.textContent);
+                    
+                    toggleBtns.forEach(b => {
+                        b.classList.remove("active");
+                    })
+
+                    btn.classList.add("active");
+                    
+                })
+            })
+                                  
+            const businessBox = document.querySelector('.business-box');
+            const businessInput = document.querySelector('input[name=""]');
+            const businessLis = document.querySelectorAll('.business-select li');
+            
+            // 열고닫기 가능
+            businessBox.addEventListener("click", () => {
+                businessBox.classList.toggle("active");
+            })
+
+            businessLis.forEach(li => {
+                li.addEventListener("click", (e) =>{
+                    e.stopPropagation(); // 이벤트가 더이상 퍼져나가는걸 방지
+
+                    businessInput.value = li.textContent;
+                    businessBox.classList.remove("active");
+                })
+            })
+            </script>
+            <!-- 
+             html은 부보 자식 구조임
+             <div class="business-box"> <-부모
+             <ul class="business-select"> <-자식
+                <li>매장방문</li> <-손자
+             </ul>
+            </div>
+
+            손자li를 클릭하면 부모도 클릭된것처럼 느껴짐
+            li도 클릭되고 부모도 클릭된거라 인지하고 두개의 addEventListener가 모두 실행됨
+            e.stopPripagation()을 사용하면 부모까지 가지않게 전파를 막음
+            -->
         </main>
         <footer>
             <ul class="line1">
@@ -472,6 +629,62 @@
             </ul>
             <p class="heading">COPYRIGHT &copy; KKUBLACK ALL RIGHTS RESERVED.</p>
         </footer>
+        <div>
+        </div>
     </div>
 </body>
+    <script>
+    const menuWrap = document.querySelector(".menu-wrap");
+    const menuItems = menuWrap.querySelectorAll("li");
+    const sections = document.querySelectorAll("#brand, #competi, #franchise, #guide, #price");
+
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+                    
+            // console.log(scrollY);
+
+            if(scrollY > 100) {
+                // menuWrap.classList.add("show");
+                menuWrap.style.display ="flex";
+            } else {
+                // menuWrap.classList.remove("show");
+                menuWrap.style.display ="none";
+            }
+
+            // 지금 어느섹션에 있는지 찾기
+            let currentId = "";
+
+            sections.forEach((section) => {
+                // section.offsetTop은 그 섹션이 페이지 맨 위에서 얼마나 떨어져있는지
+                // -150은 여유값, 섹션이 화면 강단에 거의 닿을 때 미리 바꿔주려는 조건식
+                if(scrollY >= section.offsetTop - 150) {
+                    currentId = section.id;
+                }
+            })
+
+            // currentId와 일치하는 링크를 가진 li에 active적음
+            menuItems.forEach((item) => {
+                item.classList.remove("active");
+
+                const link = item.querySelector("a");
+                if(link.getAttribute("href") === "#" + currentId) {
+                    item.classList.add("active");
+                }
+            })
+
+        })
+                
+    </script>
+    <!-- 
+        style.top
+        style.backgroundColor
+        style.boxShadow
+        style.borderRadius
+        style.fontSize
+        style.paddingTop  
+    -->
+
+    <script>
+        AOS.in
+    </script>
 </html>
