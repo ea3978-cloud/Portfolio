@@ -55,7 +55,64 @@
             </button>
         </div>
     </header>
-    <section>
-    </section>
+    <script>
+            const menuBtn = document.querySelector(".menu-btn");
+            const gnb = document.querySelector(".gnb");
+
+            menuBtn.addEventListener("click", () => {
+                menuBtn.classList.toggle("is-open");
+                gnb.classList.toggle("is-open");
+
+                if(menuBtn.classList.contains("is-open")) {
+                console.log("열려있어!")
+                }   else {
+                console.log("닫혀있어!")
+                }
+            })
+            
+            const gnbLink = document.querySelectorAll(".gnb a");
+            gnbLink.forEach((link) => {
+                link.addEventListener("click",() =>{
+                    menuBtn.classList.remove("is-open");
+                    gnb.classList.remove("is-open");
+                })
+            })
+        </script>
+        <section class="hero-sec">
+            <div class="inner">
+                <div class="hero-content">
+                    <div class="tag">
+                        교통사고·보험 분쟁·합의/소송 전문
+                    </div>
+                    <h1>사고 이후,가장 먼저 필요한 것은<br>올바른 <span>법률 판단</span>입니다.</h1>
+                    <p>보헙사와의 합의, 정당한 보상, 복잡한 절차. 법률사무소 얼라인은 교통사고 사건에 집중하여,<br>사고 직후 상담부터 합의·소송까지 한 곳에서 함께합니다.</p>
+                    <div class="hero-btn">
+                        <a href="#" class="btn btn-gold">무료 상담 시작 →</a>
+                        <a href="#" class="btn btn-dark">AI 상담 시작</a>
+                    </div>
+                    <ul class="hero-info">
+                        <li>
+                            <img class="icon" src="img/check.svg" alt="">
+                            <span>교통사고 사건 집중</span>
+                        </li>
+                        <li>
+                            <img class="icon" src="img/check.svg" alt="">
+                            <span>AI 사전 상담</span>
+                        </li>
+                        <li>
+                            <img class="icon" src="img/check.svg" alt="">
+                            <span>합의부터 소송까지</span>
+                        </li>
+                    </ul>                    
+                </div>
+                <div class="hero-img">
+                    <img src="../align law/img/head.png" alt="">
+                    <div class="career-box">
+                        <strong class="career-num">1:1</strong>
+                        <span>사건별 맞춤<br><strong class="career-txt">법률 전략 수립</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
 </body>
 </html>
