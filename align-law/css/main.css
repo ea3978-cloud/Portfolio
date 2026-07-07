@@ -299,7 +299,7 @@ header .inner{
     transition: 0.3s;
 }
 .btn-gold {
-    background-color: #c9a242;
+    background-color: #c9a24e;
     color: #1a1a1e;
 }
 .btn-dark {
@@ -362,7 +362,7 @@ header .inner{
     font-weight: 500;
     border-radius: 50%;
     background-color: #221f17;
-    color: #c9a242;
+    color: #c9a24e;
 }
 .career-box span {
     font-size: 13px;
@@ -525,4 +525,44 @@ header .inner{
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* foryou-sec */
+
+.circle {
+    position: relative;
+    width: 524px;
+    height: 524px;
+    margin: 100px auto 0;
+}
+.circle-bg {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c9a24e;
+    border-radius: 50%;
+}
+.center-txt {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 162px;
+    height: 162px;
+}
+.item01 {
+    top: 50px;
+    right: -25%;
+    border: 1px solid #c9a24e;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    background-color: #14141a;
+    color: #f4f4f1;
 }
