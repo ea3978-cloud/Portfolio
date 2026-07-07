@@ -126,14 +126,132 @@
             <!-- 스크롤작업시 header가 사라진 후에 생성 -->
 
             
-            <section class="hero-sec heading scroll" id="brand">
-                <div class="txt-ani">
+            <section class="hero-sec heading open" id="brand">
+                <div class="txt-ani" data-aos="faed-up" data-aos-anchor-placement="top-bottom" data-aos-delay="1500">
                     <div><strong>멈출수 없는 맛</strong></div>
                     <div><strong>불맛을 제대로</strong></div>
                 </div>
-                <h2>꾸블랙치킨</h2>
+                <h2 data-aos="faed-up" data-aos-anchor-placement="top-bottom" data-aos-delay="1800">꾸블랙치킨</h2>
                 <p>1만 시간의 집념으로 제대로 구웠다.</p>
             </section>
+            <script> // 히어로섹션 클립패스 스크립트
+                window.addEventListener("load", function() {
+                    document.querySelector(".hero-sec").classList.add("open");
+                })
+
+                let progress = 0;
+                // 현재 스크롤을 잠근 상태이지 저장
+                // false일떄는 일반 스크롤 가능, true일때는 스크롤을 막고 애니메이션을 실행
+                let isHeroLocked = false;
+                // 스크롤을 잠글때 현재 위치
+                let scrollPosY = 0;
+                const TOTAL = 1200;
+                // 애니메이션이 끝까지 동작하기 위해 필요한 스크롤 양
+                // 1200px만큼 휠을 돌리면 progress가 1이됨
+                let isUnlocking = false;
+                // 스크롤 해제예약이 되어있는지 확인하는 변수
+                // setTimeout이 여러번 실행되지 않도록 막는 장치
+                // 지금 스크롤을 해제하는 작업을 예약해둔 상태인가? 를 저장
+                // 잠시 후 스크롤을 풀어줄게!상태인지 확인하는 변수
+                // 이미 기다리는 중이라면 setTimeout을 또 실행하지 않는다
+                const heroPanel = document.querySelector("#brand");
+
+                window.addEventListener('wheel', (e) => {                
+                // 마우스 휠을 아래로 휠 양수(true), 위로 휠 음수(false)
+                // 아래인지, 위인지를 판단하는 것
+                const goingDown = e.deltaY > 0;
+                // console.log(e.deltaY);
+                // getBoundingClientRect() 현재요소가 화면의 어디에 있는지 알려주는 함수
+                const heroRect = heroPanel.getBoundingClientRect();
+                // console.log(heroRect);
+                // 요소의 아래쪽 끝이 화면의 맨 위(0px)에서 얼마나 떨어져 있는지 heroRect.bottom
+                // 히어로 화면 아래쪽 끝이 아직 화면 위보다 아래에 있다면 true, 즉 화면에 아직 보이는 상태
+                bottom = -50;
+                const isHeroVisible = heroRect.bottom > 0;
+
+                // 일반 스크롤 상태일때만 실행
+                if(!isHeroLocked) {
+                    // 아래로 스크롤 + hero섹션보임 + 아직 애니메이션이 안끝남을 모두 만족
+                    const lockDown = goingDown && isHeroVisible && progress < 1;
+                    // 위로 스크롤 + 맨위 + 애니메이션이 끝난 상태이면 역재생
+                    const lockUp = !goingDown && window.scrollY <= 0 && progress > 0;
+
+                    // 아래 또는 위 조건이 만족된 경우 (둘중하나만 만족이되면)
+                    if (lockDown || lockUp) {
+                        // 스크롤 잠금 상태
+                        isHeroLocked = true;
+                        // 이전 예약이 남았다면 초기화
+                        isUnlocking = false;
+                        // 현재위치 저장 후 hidden(페이지 이동화면을 막음)
+                        scrollPosY = window.scrollY;
+                        document.documentElement.style.overflow = "hidden";
+                    }
+                }
+
+                // 잠겨있는 동안 실행(잠긴상태에서만)
+                if(isHeroLocked) {
+                    // 기본스크롤(해당이벤트)을 막음
+                    e.preventDefault();
+                    // 스크롤 위치 고정(아까 저장한 위치로 계혹 되돌려야 화면이 움직이지 않음)
+                    window.scrollTo(0, scrollPosY);
+                    // 120 / 1200 = 0.1 progress가 0.1,0.2,0.3으로 증가
+                    progress += e.deltaY / TOTAL;
+                    // -0.2면 0 1 이 넘어가면 1로제한하여 변환
+                    // css로 적용
+                    progress = Math.min(Math.max(progress, 0), 1);
+                    heroPanel.style.setProperty("--progress", progress);
+
+                    // 애니메이션 끝남 아직 스크롤 해제를 예약하지 않았다면 실행
+                    if(progress >= 1 && !isUnlocking) {
+                        // 중복예약하기
+                        isUnlocking = true;
+
+                        setTimeout(() => {
+                            // 사용자가 다시 위로 돌리지 않았다면
+                            if(progress >= 1) {
+                                // 잠금을 해제하자
+                                isHeroLocked = false;
+                                document.documentElement.style.overflow = "auto";
+                            }
+                            // 예약상태를 초기화
+                            isUnlocking = false;
+                        }, 600);
+                    }
+                    // 역재생종료 - 잠금해제 후 일반 스크롤로 돌아감
+                    if(progress <= 0) {
+                        isHeroLocked = false;
+                        document.documentElement.style.overflow = "auto";
+                    }
+                }
+            }, {passive : false});
+            // wheel이벤트 안에서 preventDefault()를 사용할 것이다 라고 브라우저에게 알림
+            // wheel, touch이벤트에서는 기본적으로 스크롤을 막지 않을거지? 라고 동작함 
+
+
+            </script>
+            <!-- 
+              사용자가 휠을 돌림
+              ↓
+              아래또는 위 스크롤인지 확인
+              ↓ 
+              Hero가 화면에 있는지 확인
+              ↓ 
+              스크롤 잠금
+              ↓ 
+              progress값 증가 (0 -> 1)
+              ↓ 
+              css변수변경(--progress)
+              ↓ 
+              텍스트위치와 투명도 애니메이션 실행(css작업)
+              ↓ 
+              progress = 1
+              ↓ 
+              600ms대기
+              ↓ 
+              스크롤잠금해제
+              ↓ 
+              다음섹션이동 
+            -->
             <div class="banner-wrap heading">
                 <div class="banner-track">
                     <div class="banner-item">
@@ -217,13 +335,9 @@
             };
             // 페이지가 완전히 로드된후 함수 실행
             window.addEventListener('load', startCountersOnScroll);
+
             </script>
-
-
-
-            <!-- <div class="bg-sec"> 
-                <img src="img/s3_bg.jpg" alt="꾸블랙치킨">
-            </div> -->
+            
             <div class="sec-wrap">
                 <div class="bg">
                     <section class="intro-sec">
@@ -281,8 +395,8 @@
                       },
                     })
                 </script>
-                <section class="merit-sec pd" id="franchise" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300" data-aos-easing="ease-out" data-aos-once="true">
-                    <div class="inner">
+                <section class="merit-sec pd" id="franchise">
+                    <div class="inner"data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300" data-aos-easing="ease-out" data-aos-once="true">
                         <div class="txt-box">
                             <h2 class="heading tit">
                                 <span>1만 시간의 노하우를</span>
@@ -324,8 +438,8 @@
                         </ul>
                     </div>
                 </section>
-                <section class="youtube-sec pd" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="0">
-                    <h2 class="heading tit">
+                <section class="youtube-sec pd">
+                    <h2 class="heading tit" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="0">
                         <span>22평 매장에서 억대매출 달성!</span>
                         <span>비법은 빠른 조리과정에 있습니다</span>
                     </h2>
@@ -372,8 +486,8 @@
                     </ul>
                    </div>
                 </section>
-                <section class="franc-sec pd" id="price" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                    <div class="inner">
+                <section class="franc-sec pd" id="price" >
+                    <div class="inner" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                          <div class="txt-box">
                             <h2 class="heading tit">신규창업 비용</h2>
                             <p>본사 마진만 남는 거품 비용은 확 빼고 창업비용만 남겼습니다.</p>
@@ -461,7 +575,7 @@
                                 <span>하단의 정보를 기입해주시면 빠른 시일 내에 친절하고 자세한 상담 도와드리겠습니다.</span>
                             </p>
                         </div>
-                        <div class="form-container">data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                        <div class="form-container" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                            <div class="form-header">
                             <h3>상담자 정보</h3>
                             <p class="gray">별표 표시는 필수 입력 항목입니다.</p>
