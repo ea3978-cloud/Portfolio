@@ -2139,3 +2139,42 @@ header .inner{
         line-height: 1.75;
     }
 }
+/* location-sec */
+.location-sec {
+    padding: 104px 24px;
+    background-color: #0c0c0e;
+}
+.location-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.location-map-wrap {
+    width: 765px;
+    flex-shrink: 0;
+}
+.location-sub-title {
+    display: block;
+    margin-bottom: 16px;
+    color: #d2b473;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+.location-title {
+    margin-bottom: 40px;
+    font-family: "Noto Serif KR",serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #f4f4f1;
+}
+.location-map {
+    overflow: hidden;
+    border: 1px solid #34343a;
+    border-radius: 20px;
+}
+.location-map img {
+    display: block;
+    width: 100%;
+}
