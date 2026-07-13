@@ -2,7 +2,7 @@
 
 .top-bar {
     width: 100%;
-    padding: 4px 20px;
+    padding: 8px 20px;
     background-color: #0c0c0e;
     font-size: 13px;
     color: #a2a4a1;
@@ -62,7 +62,7 @@
 
 header{
     width: 100%;
-    padding: 0 20px;
+    padding: 10px 20px;
     background: #0c0c0e;
 }
 header .inner{
@@ -229,7 +229,7 @@ header .inner{
         gap:6px;
     }
     .logo img{
-        width:42px;
+        width:50px;
     }
     .logo-title{
         font-size:18px;
@@ -394,7 +394,7 @@ header .inner{
     .hero-sec  {
         margin: 0 auto;
     }
-    .hero-img img {
+    .hero-img {
         width: 530px;
     }
     .tag {
@@ -408,8 +408,7 @@ header .inner{
     }
     .hero-btn .btn-gold,
     .hero-btn .btn-dark {
-        font-size: 15px;
-        padding: 24px 14px;
+        font-size: 15px;        
     }
     .hero-info .icon {
         width: 20px;
@@ -434,23 +433,19 @@ header .inner{
     }
 }
 @media (max-width:1280px) {
-    .hero-img img {
-        width: 530px;
+    .hero-img {
+        width: 480px;
     }
     .tag {
-        font-size: 10px;
-    }
-    .hero-content h1 {
-        font-size: 40px;
-    }
-    .hero-content p {
         font-size: 14px;
     }
-    .hero-btn .btn-gold,
-    .hero-btn .btn-dark {
-        font-size: 13px;
-        padding: 22px 12px;
+    .hero-content h1 {
+        font-size: 35px;
     }
+    .hero-content p {
+        font-size: 18px;
+    }
+    
     .hero-info .icon {
         width: 18px;
         height: 18px;
@@ -473,48 +468,29 @@ header .inner{
         font-size: 10px;
     }
 }
-@media (max-width:820px) {
-    .hero-img img {
-        width: 430px;
-    }
-    .tag {
-        font-size: 9px;
-    }
-    .hero-content h1 {
-        font-size: 21px;
-    }
-    .hero-content p {
-        font-size: 8px;
-    }
-    .hero-btn .btn-gold,
-    .hero-btn .btn-dark {
-        font-size: 11px;
-        padding: 18px 10px;
-    }
-    .hero-info .icon {
-        width: 15px;
-        height: 15px;
-    }
-    .hero-info span {
-        font-size: 9px;
-    }
+@media (max-width:1024px) {        
+    
     .career-box {
-        width: 120px;
-        height: 40px;
-        padding: 10px 14px;
-        bottom: 40px;
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 10px 20px;
+        margin-top: 1em;
+        border-radius: 8px;
+        gap: 20px;
     }
-    .career-num {
-        font-size: 11px;
-        width: 22px;
-        height: 22px;
+   .career-num {
+    font-size: 18px;
+   }
+    .career-box span {
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2m;
     }
-    .career-box span,
-    .career-txt {
-        font-size: 8px;
+    .career-box strong {
+        font-size: 16px;
     }
-}
-@media (max-width:680px) {
     .hero-sec .inner {
         flex-direction: column;
         align-items: flex-start;
@@ -522,29 +498,44 @@ header .inner{
     }
     .hero-content {
         width: 100%;
-        text-align: center;
     }
     .hero-img {
-        width: 320px;
+        width: 100%;
         align-self: center;
         margin-top: 20px;
     }
     .hero-btn {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
         gap:12px;
     }
-    .hero-info {
-        flex-direction: column;
-        align-items: center;
+    .hero-btn > a {        
+        width: 100%;
     }
+    .hero-info  {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+    }
+    .hero-info .icon {
+        width: 15px;
+        height: 15px;
+    }
+    .hero-info span {
+        font-size: 15px;
+    }
+   
+    
 }
+
 
 /* foryou-sec */
 .foryou-sec {
     padding: 104px 0;
     background-color: #1c1c1f;
+}
+foryou-inner {
+    padding: 0 20px;
 }
 .sec-title {
     text-align: center;
@@ -678,10 +669,6 @@ header .inner{
     .sec-title{
         margin-top: 80px;
     }
-    .sub-title{
-        font-size: 12px;
-        margin-bottom: 10px;
-    }
     .sec-title h2{
         font-size: 34px;
         margin-bottom: 14px;
@@ -736,20 +723,8 @@ header .inner{
     .sec-title{
         margin-top: 60px;
         padding: 0 20px;
-    }
-    .sub-title{
-        font-size: 12px;
-        margin-bottom: 8px;
-    }
-    .sec-title h2{
-        font-size: 26px;
-        line-height: 1.3;
-        margin-bottom: 13px;
-    }
-    .sec-title p{
-        font-size: 12px;
-        line-height: 1.7;
-    }
+    }  
+   
     .circle{
         width: 320px;
         height: 320px;
@@ -798,24 +773,17 @@ header .inner{
         transform: translate(-285%, -220%);
     }
 }
-@media(max-width: 368px) {
+@media(max-width: 375px) {
      .sec-title{
         margin-top: 60px;
         padding: 0 20px;
-    }
-    .sub-title{
-        font-size: 11px;
-        margin-bottom: 8px;
     }
     .sec-title h2{
         font-size: 23px;
         line-height: 1.2;
         margin-bottom: 12px;
     }
-    .sec-title p{
-        font-size: 11px;
-        line-height: 1.6;
-    }
+  
     .circle{
         width: 280px;
         height: 280px;
@@ -936,7 +904,7 @@ header .inner{
     left: 0;
     bottom: 0;
     width: 38px;
-    border: 2px solid #c9a24e;
+    border: 1px solid #c9a24e;
 }
 .why-list p {
     font-size: 16px;
@@ -952,7 +920,7 @@ header .inner{
         margin-bottom: 14px;
     }
     .section-title .sub-tit{
-        font-size: 36px;
+        font-size: 35px;
     }
     .why-list{
         gap: 35px;
@@ -985,10 +953,6 @@ header .inner{
     .section-title{
         margin-bottom: 44px;
     }
-    .section-title .why-sub-title{
-        font-size: 11px;
-        margin-bottom: 12px;
-    }
     .section-title h2{
         font-size: 34px;
     }
@@ -1013,25 +977,23 @@ header .inner{
     }
     .why-title::after{
         width: 32px;
-        height: 2px;
     }
     .why-list p{
         font-size: 15px;
         line-height: 1.7;
     }
 }
-@media (max-width:820px){
+@media (max-width:1024px){
     .section-title{
         text-align: center;
         margin-bottom: 40px;
     }
-    .section-title .why-sub-title{
-        font-size: 10px;
-    }
+    
     .section-title h2{
         font-size: 30px;
     }
     .why-list{
+        flex-direction: column;
         gap: 40px;
     }
     .why-top{
@@ -1051,52 +1013,14 @@ header .inner{
     }
     .why-title::after{
         width: 32px;
-        height: 2px;
+        height: 1px;
     }
     .why-list p{
         font-size: 15px;
         line-height: 1.7;
     }
 }
-@media (max-width:680px){
-    .section-title{
-        text-align: center;
-        margin-bottom: 36px;
-    }
-    .section-title .why-sub-title{
-        font-size: 9px;
-    }
-    .section-title h2{
-        font-size: 28px;
-    }
-    .why-list{
-        flex-direction: column;
-        gap: 35px;
-    }
-    .why-top{
-        margin-bottom: 14px;
-    }
-    .why-icon{
-        width: 46px;
-        height: 46px;
-    }
-    .why-num{
-        font-size: 22px;
-    }
-    .why-title{
-        font-size: 14px;
-        padding-bottom: 14px;
-        margin-bottom: 14px;
-    }
-    .why-title::after{
-        width: 30px;
-        height: 2px;
-    }
-    .why-list p{
-        font-size: 13px;
-        line-height: 1.6;
-    }
-}
+
 /* chet-sec */
 .chat-sec {
     padding: 104px 24px;
@@ -1265,16 +1189,23 @@ header .inner{
     height: 6px;
 }
 @media (max-width:1024px){
+    .chat-content {
+        width: 100%;
+    }
     .chat-sec .inner{
-        gap: 60px;
+        position: relative;
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 72px;
     }
     /* ---------- 왼쪽 ---------- */
     .chat-title{
-        font-size: 34px;
+        font-size: 35px;
         margin-bottom: 14px;
     }
     .chat-desc{
-        font-size: 16px;
+        font-size: 18px;
         margin-bottom: 26px;
         line-height: 1.7;
     }
@@ -1283,18 +1214,22 @@ header .inner{
         margin-bottom: 28px;
     }
     .question-list span{
-        font-size: 14px;
+        font-size: 15px;
     }
     .question-list p{
         font-size: 15px;
     }
     .chat-btn{
         padding: 14px 24px;
-        font-size: 16px;
+        font-size: 15px;
+        width: 100%;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
     }
     /* ---------- 오른쪽 ---------- */
     .chat-box{
-        max-width: 520px;
+        max-width: 100%;
     }
     .chat-header{
         padding: 14px 18px;
@@ -1319,77 +1254,14 @@ header .inner{
         padding: 10px 14px;
     }
 }
-@media (max-width:820px){
-    .chat-sec .inner{
-        gap: 40px;
-    }
-    .chat-title{
-        font-size: 30px;
-    }
-    .chat-desc{
-        font-size: 15px;
-    }
-    .chat-box{
-        width: 100%;
-        max-width: 420px;
-    }
-    .chat-header{
-        padding: 14px 16px;
-    }
-    .chat-body{
-        padding: 16px;
-    }
-    .user p,
-    .bot p{
-        font-size: 13px;
-        padding: 10px 14px;
-    }
-}
-@media (max-width:680px){
-    .chat-sec{
-        padding: 60px 20px;
-    }
-    .chat-sec .inner{
-        flex-direction: column;
-        gap: 50px;
-    }
-    /* 왼쪽 */
-    .chat-content{
-        width: 100%;
-        text-align: center;
-    }
-    .chat-sub-title{
-        font-size: 12px;
-    }
-    .chat-title{
-        font-size: 28px;
-        line-height: 1.4;
-    }
-    .chat-desc{
-        margin: 0 auto 28px;
-        max-width: 500px;
-        font-size: 15px;
-    }
-    .question-list{
-        width: fit-content;
-        margin: 0 auto 30px;
-    } 
-    .chat-btn{
-        padding: 12px 18px;
-        font-size: 12px;
-    }
-    /* 오른쪽 */
-    .chat-box{
-        width: 100%;
-        max-width: 500px;
-    }
-}
+    
 
 /* team-sec */
 .team-sec {
     padding: 104px 24px 0;
-    background-color: #1c1c1f;
     border: 1px solid #2a2a2e;
+    padding-bottom: 43%;
+    background: #1c1c1f url(../img/person.png) no-repeat center bottom / 100%;
 }
 .team-inner {
     display: flex;
@@ -1399,10 +1271,7 @@ header .inner{
 .team-sec .section-tit {
     text-align: center;
 }
-.team-sec .team-inner {
-    padding-bottom: 42%;
-    background: url(../img/person.png) no-repeat center bottom / 100%;
-}
+
 .team-sub-title{
     display:block;
     margin-bottom:16px;
@@ -1468,52 +1337,12 @@ header .inner{
         font-size: 13px;
     }
 }
-@media(max-width:820px) {
-    .team-sub-title{
-        margin-bottom: 12px;
-        font-size: 12px;
-        letter-spacing: 1.5px;
-    }
-    .team-title{
-        margin-bottom: 14px;
-        font-size: 30px;
-    }
-    .team-sec p{
-        margin-bottom: 24px;
-        font-size: 15px;
-    }
-    .team-tag{
-        gap: 7px;
-    }
-    .team-tag span{
-        height: 28px;
-        padding: 4px 12px;
-        font-size: 12px;
+@media (max-width: 480px) {
+    .team-sec {
+        padding-bottom: 48%;
     }
 }
-@media(max-width: 680px) {
-    .team-sub-title{
-        margin-bottom: 10px;
-        font-size: 11px;
-    }
-    .team-title{
-        margin-bottom: 12px;
-        font-size: 28px;
-    }
-    .team-sec p{
-        margin-bottom: 22px;
-        font-size: 15px;
-    }
-    .team-tag{
-        gap: 6px;
-        margin-bottom: 16px;
-    }
-    .team-tag span{
-        height: 26px;
-        padding: 2px 10px;
-        font-size: 11px;
-    }
-}
+
 .expertise-sec {
     padding: 104px 24px;
     background-color: #0c0c0e;
@@ -1615,9 +1444,9 @@ header .inner{
 @media(max-width: 1280px) {
     .expertise-sub-title{
         margin-bottom: 14px;
-        font-size: 12px;
         letter-spacing: 1.8px;
     }
+   
     .expertise-title {
         margin-bottom: 14px;
         font-size: 36px;
@@ -1637,8 +1466,9 @@ header .inner{
     .expertise-list li {
         gap: 8px;
     }
-    .expertise-list span {
-       font-size: 13px;
+   .expertise-list img {
+        width: 20px;
+        height: 20px;
     }
     .expertise-photo {
         width: 520px;
@@ -1655,110 +1485,21 @@ header .inner{
         font-size: 12px;
     }
 }
-@media(max-width: 820px) {
-    .expertise-content {
-        width: 100%;
-        text-align: center;
-    }
-    .expertise-sub-title {
-        margin-bottom: 12px;
-        font-size: 11px;
-    }
-    .expertise-title {
-        margin-bottom: 13px;
-        font-size: 30px;
-    }
-    .expertise-career {
-        margin-bottom: 13px;
-        font-size: 14px;
-    }
-    .expertise-desc {
-        margin-bottom: 30px;
-        font-size: 15px;
-        line-height: 1.6;
+@media(max-width: 1024px) {
+    .expertise-inner {
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
     }
     .expertise-list {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    .expertise-list li {
-        gap: 8px;
-    }
-    .expertise-list img {
-        width: 20px;
-        height: 20px;
-    }
-    .expertise-list span {
-        font-size: 13px;
-        text-align: left;
+        grid-template-columns: repeat(1, 1fr)
     }
     .expertise-photo {
-        width: 410px;
+        width: 100%;
     }
     .expertise-card {
-        left: -60px;
-        bottom: 40px;
-        padding: 11px 14px;
-    }
-    .expertise-card strong {
-        font-size: 13px;
-    }
-    .expertise-card span {
-        font-size: 11px;
-    }
-}
-@media (max-width:680px){
-    .expertise-inner{
-        position:relative;
-        flex-direction: column;
-    }
-    .expertise-content{
-        order: 2;
-        display:flex;
-        flex-direction:column;
-    }
-    .absolute{
-        position:absolute;
-        top:0;
-        left:50%;
-        transform:translateX(-50%);
-        width:100%;
-        text-align:center;
-    }
-    .expertise-sub-title{
-        margin-bottom:12px;
-        font-size:12px;
-    }
-    .expertise-title{
-        margin-bottom:12px;
-        font-size:28px;
-    }
-    .expertise-career{
-        font-size:15px;
-    }
-    .expertise-photo{
-        width:100%;
-        max-width:360px;
-        margin:170px auto 40px;
-    }
-    .expertise-card{
-        left: 0;
-        bottom: 50px;
-        transform: translateX(-50%);
-    }
-    .expertise-desc{
-        margin-bottom:28px;
-        text-align:center;
-        font-size:14px;
-    }
-    .expertise-list{
-        grid-template-columns:1fr;
-        gap:14px;
-        max-width:360px;
-        margin:0 auto;
-    }
-    .expertise-list li{
-        justify-content:center;
+        position: static;
+        margin-top: 20px;
     }
 }
 
@@ -1940,68 +1681,20 @@ header .inner{
         right:-23px;
     }
 }
-@media (max-width:820px) {
-    .pro-title-wrap{
-        text-align:center;
-        margin-bottom:40px;
-    }
-    .pro-title{
-        font-size:30px;
-    }
-    .pro-desc{
-        font-size:15px;
-    }
-    .pro-list{
-        display:grid;
-        grid-template-columns:repeat(2,1fr);
-        gap:24px;
-    }
-    .pro-item{
-        width:100%;
-        height:210px;
-    }
-    .pro-arrow{
-        display:none;
-    }
-    .pro-btn{
-        margin:0 auto;
-    }
-}
-@media (max-width:680px) {
-    .pro-title-wrap{
-        text-align:center;
-    }
-    .pro-title{
-        font-size:28px;
-    }
-    .pro-desc{
-        font-size:14px;
-    }
-    .pro-list{
+
+@media (max-width:1024px) {
+     .pro-list{
         display:flex;
         flex-direction:column;
         gap:18px;
+        margin-bottom: 20px;
     }
-    .pro-item{
-        width:100%;
-        max-width:420px;
-        height:auto;
-        margin:0 auto;
+    .pro-item {
+        width: 100%;
     }
-    .pro-top{
-        margin-bottom:16px;
-    }
-    .pro-item-title{
-        font-size:20px;
-    }
-    .pro-item-desc{
-        font-size:14px;
-        line-height:1.7;
-    }
-    .pro-btn{
-        display:flex;
-        justify-content:center;
-        margin:0 auto;
+    .pro-btn {
+        width: 100%;
+        font-size: 15px;
     }
 }
 
@@ -2057,12 +1750,12 @@ header .inner{
 .faq-call-info span { 
     display: block; 
     color: #8a8c8a; 
-    font-size: 13px; 
+    font-size: 15px; 
     margin-bottom: 2px; 
 } 
 .faq-call-info p { 
     color: #f4f4f1; 
-    font-size: 13px; 
+    font-size: 15px; 
     font-weight: 700; 
 } 
 .faq-item { 
@@ -2155,12 +1848,6 @@ header .inner{
     .faq-call strong {
         font-size: 17px;
     }
-    .faq-call-info span {
-        font-size: 12px;
-    }
-    .faq-call-info p {
-        font-size: 13px;
-    }
     .faq-question span {
         font-size: 16px;
         gap: 10px;
@@ -2174,7 +1861,7 @@ header .inner{
         line-height: 1.75;
     }
 }
-@media (max-width: 820px) {
+@media (max-width: 1024px) {
     .faq-inner {
         flex-direction: column;
     }
@@ -2192,7 +1879,7 @@ header .inner{
     .faq-call {
         width: 320px;
         margin: 0 auto;
-        justify-content: center;
+        align-items: center;
     }
     .faq-list {
         width: 100%;
@@ -2204,6 +1891,13 @@ header .inner{
         padding: 0 0 24px 30px;
         font-size: 15px;
         line-height: 1.75;
+    }
+    .faq-call-info {
+        display: flex;
+        gap: 8px;
+    }
+    .faq-call-info span {
+        margin-bottom: 0;
     }
 }
 /* location-sec */
