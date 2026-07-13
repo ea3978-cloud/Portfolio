@@ -534,7 +534,7 @@ header .inner{
     padding: 104px 0;
     background-color: #1c1c1f;
 }
-foryou-inner {
+.foryou-inner {
     padding: 0 20px;
 }
 .sec-title {
@@ -1487,20 +1487,38 @@ foryou-inner {
 }
 @media(max-width: 1024px) {
     .expertise-inner {
+        position: relative;
         flex-direction: column;
         gap: 40px;
         align-items: flex-start;
+        padding-top: 150px;
+    }
+    .expertise-content {
+        order: 2;
+    }
+    .absolute {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: center;
     }
     .expertise-list {
         grid-template-columns: repeat(1, 1fr)
     }
     .expertise-photo {
-        width: 100%;
+        max-width: 480px;
+        width: 80%;
+        margin: 0 auto;
     }
     .expertise-card {
         position: static;
         margin-top: 20px;
     }
+    .expertise-sub-title,
+    .expertise-title {
+        margin-bottom: 4px;
+    }
+    
 }
 
 /* process-sec */
