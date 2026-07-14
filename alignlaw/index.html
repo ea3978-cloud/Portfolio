@@ -37,13 +37,13 @@
             </h1>
             <nav class="gnb">
                 <ul>
-                    <li><a href="#">서비스 대상</a></li>
-                    <li><a href="#">강점</a></li>
-                    <li><a href="#">AI상담</a></li>
-                    <li><a href="#">변호사</a></li>
-                    <li><a href="#">진행 절차</a></li>
-                    <li><a href="#">자주 묻는 질문</a></li>
-                    <li><a href="#">오시는 길</a></li>
+                    <li><a href="#hero">서비스 대상</a></li>
+                    <li><a href="#why">강점</a></li>
+                    <li><a href="#chat">AI상담</a></li>
+                    <li><a href="#team">변호사</a></li>
+                    <li><a href="#expertise">진행 절차</a></li>
+                    <li><a href="#faq">자주 묻는 질문</a></li>
+                    <li><a href="#location">오시는 길</a></li>
                 </ul>
             </nav>
             <div class="header-btn">
@@ -71,15 +71,16 @@
                 }
             })
             
-            const gnbLink = document.querySelectorAll(".gnb a");
-            gnbLink.forEach((link) => {
+            const menuLink = document.querySelectorAll(".gnb a");
+            menuLink.forEach((link) => {
                 link.addEventListener("click",() =>{
                     menuBtn.classList.remove("is-open");
                     gnb.classList.remove("is-open");
+                    document.body.style.overflow = "";
                 })
             })
     </script>
-    <section class="hero-sec">
+    <section class="hero-sec" id="hero">
             <div class="inner">
                 <div class="hero-content">
                     <div class="tag">
@@ -151,7 +152,7 @@
             </div>
         </div>
     </section>
-    <section class="why-sec">
+    <section class="why-sec" id="why">
         <div class="inner">
             <div class="section-title">
                 <span class="why-sub-title">WHY ALIGN LOW</span>
@@ -191,7 +192,7 @@
             </ul>
         </div>
     </section>
-    <section class="chat-sec">
+    <section class="chat-sec" id="chat">
         <div class="inner">
         <!-- 왼쪽 -->
             <div class="chat-content">
@@ -261,7 +262,7 @@
             </div>
         </div>
     </section>
-    <section class="team-sec">
+    <section class="team-sec" id="team">
         <div class="team-inner">
             <div class="section-tit">
                 <span class="team-sub-title">
@@ -285,7 +286,7 @@
             </ul>
         </div>
     </section>
-    <section class="expertise-sec">
+    <section class="expertise-sec" expertise>
         <div class="inner expertise-inner">
             <div class="expertise-content">
                 <div class="absolute">
@@ -420,7 +421,7 @@
             </a>
         </div>
     </section>
-    <section class="faq-sec">
+    <section class="faq-sec" id="faq">
         <div class="inner faq-inner">
             <!-- 왼쪽 -->
              <div class="faq-content">
@@ -499,7 +500,7 @@
             });
         </script>
     </section>
-    <section class="location-sec">
+    <section class="location-sec" id="location">
         <div class="inner">
              <!-- 왼쪽 -->
                 <div class="location-title-wrap">
@@ -569,12 +570,16 @@
             </div>
         </div>
     </section>
-    <section class="footer-sec">
+    <section class="footer-section">
         <div class="inner footer-inner">
             <!-- 로고 -->
                 <div class="footer-brand">
                 <a href="" class="footer-logo">
                     <img src="img/logo.png" alt="ALIGN LAW">
+                    <div class="footer-logo-text">
+                        <strong>ALIGN LAW</strong>
+                        <span>법률사무소 얼라인</span>
+                    </div>
                 </a>
                 <p class="footer-brand-desc">
                     교통사고와 보험 분쟁에 집중하는 법률 사무소. 사고 직후 상담<br>부터
