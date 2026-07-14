@@ -47,6 +47,9 @@
         padding-top: 4px;
         padding-bottom: 4px;
     }
+    .top-left {
+        display: none;
+    }
     .gap{
         margin:0;
         font-size:16px;
@@ -255,7 +258,7 @@ header .inner{
     width: 100%;
     min-height: 100dvh;
     background-color: #0c0c0e;
-    padding: 90px 24px;
+    padding: 60px 24px;
 }
 .hero-sec .inner {
     max-width: 1600px;
@@ -532,7 +535,7 @@ header .inner{
 
 /* foryou-sec */
 .foryou-sec {
-    padding: 104px 0;
+    padding: 60px 0;
     background-color: #1c1c1f;
 }
 .foryou-inner {
@@ -840,7 +843,7 @@ header .inner{
 /* why-sec */
 
 .why-sec {
-    padding: 104px 24px;
+    padding: 60px 24px;
     background-color: #0c0c0e;
 }
 .section-title {
@@ -1027,7 +1030,7 @@ header .inner{
 
 /* chet-sec */
 .chat-sec {
-    padding: 104px 24px;
+    padding: 60px 24px;
     background-color: #0c0c0e;
 }
 .chat-sec .inner {
@@ -1262,8 +1265,8 @@ header .inner{
 
 /* team-sec */
 .team-sec {
-    padding: 104px 24px 0;
-    border: 1px solid #2a2a2e;
+    padding: 60px 24px 0;
+    /* border: 1px solid #2a2a2e; */
     padding-bottom: 43%;
     background: #1c1c1f url(../img/person.png) no-repeat center bottom / 100%;
 }
@@ -1348,7 +1351,7 @@ header .inner{
 }
 
 .expertise-sec {
-    padding: 104px 24px;
+    padding: 60px 24px;
     background-color: #0c0c0e;
 }
 .expertise-inner {
@@ -1528,7 +1531,7 @@ header .inner{
 /* process-sec */
 
 .process-sec { 
-    padding: 104px 24px; 
+    padding: 60px 24px; 
     border: 1px solid #2a2a2e; 
     background-color: #1c1c1f; 
 } 
@@ -1725,7 +1728,7 @@ header .inner{
 
 /* faq-sec */
 .faq-sec { 
-    padding: 104px 24px; 
+    padding: 60px 24px; 
     background-color: #0c0c0e; 
 } 
 .faq-inner { 
@@ -1925,10 +1928,20 @@ header .inner{
         margin-bottom: 0;
     }
 }
+@media (max-width: 500px) {
+    .faq-question span {
+        font-size: 13px;
+    }
+    .faq-answer p {
+        padding: 0 0 20px 26px;
+        font-size: 12px;
+        line-height: 1.65;
+    }
+}
 
 /* location-sec */
 .location-sec {
-    padding: 104px 24px;
+    padding: 60px 24px;
     background-color: #0c0c0e;
 }
 .location-inner {
@@ -2093,7 +2106,7 @@ header .inner{
 
 .case-sec {
     background-color: #1c1c1f;
-    padding: 104px 24px;
+    padding: 60px 24px;
     border: 1px solid #2a2a2e;
 }
 .case-inner {
@@ -2212,7 +2225,7 @@ header .inner{
 
 .footer-section {
     background-color: #0c0c0e;
-    padding: 64px 24px 0 24px;
+    padding: 60px 24px 0 24px;
 }
 .footer-inner {
     display: flex;
