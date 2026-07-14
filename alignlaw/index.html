@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../assets/css/font.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/main-2.css">
 </head>
 <body>
     <div class="top-bar">
@@ -38,10 +37,10 @@
             <nav class="gnb">
                 <ul>
                     <li><a href="#hero">서비스 대상</a></li>
-                    <li><a href="#why">강점</a></li>
+                    <li><a href="#why">장점</a></li>
                     <li><a href="#chat">AI상담</a></li>
-                    <li><a href="#team">변호사</a></li>
-                    <li><a href="#expertise">진행 절차</a></li>
+                    <li><a href="#expertise">변호사</a></li>
+                    <li><a href="#process">진행 절차</a></li>
                     <li><a href="#faq">자주 묻는 질문</a></li>
                     <li><a href="#location">오시는 길</a></li>
                 </ul>
@@ -49,7 +48,7 @@
             <div class="header-btn">
                 <a href="#">무료 상담 시작</a>
             </div>
-            <button class="menu-btn is-open" type="button" aria-label="메뉴 열기">
+            <button class="menu-btn" type="button" aria-label="메뉴 열기">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -71,12 +70,11 @@
                 }
             })
             
-            const menuLink = document.querySelectorAll(".gnb a");
-            menuLink.forEach((link) => {
+            const gnbLink = document.querySelectorAll(".gnb a");
+            gnbLink.forEach((link) => {
                 link.addEventListener("click",() =>{
                     menuBtn.classList.remove("is-open");
                     gnb.classList.remove("is-open");
-                    document.body.style.overflow = "";
                 })
             })
     </script>
@@ -145,12 +143,27 @@
                 <div class="item item04">
                     <p>빠른<br>전문가 상담</p>
                 </div>
-                <div class="item item05">
+                <div class="item item05 active">
                     <p>주요 대상</p>
-                    <strong>합의가<br>처음이라</strong>
+                    <p class="first">합의가<br>처음이라</p>
                 </div>
             </div>
         </div>
+        <script>
+            const items = document.querySelectorAll('.item');
+            let currentIndex = 4; // item05(인덱스 4)에서 시작
+
+            setInterval(() => {
+                // 현재 active 제거
+                items[currentIndex].classList.remove('active');
+                
+                // 다음 인덱스 계산 (순환)
+                currentIndex = (currentIndex + 1) % items.length;
+                
+                // 새로운 active 추가
+                items[currentIndex].classList.add('active');
+            }, 2000);
+    </script>
     </section>
     <section class="why-sec" id="why">
         <div class="inner">
@@ -262,7 +275,7 @@
             </div>
         </div>
     </section>
-    <section class="team-sec" id="team">
+    <section class="team-sec">
         <div class="team-inner">
             <div class="section-tit">
                 <span class="team-sub-title">
@@ -286,7 +299,7 @@
             </ul>
         </div>
     </section>
-    <section class="expertise-sec" expertise>
+    <section class="expertise-sec" id="expertise">
         <div class="inner expertise-inner">
             <div class="expertise-content">
                 <div class="absolute">
@@ -349,7 +362,7 @@
             </div>
         </div>
     </section>
-    <section class="process-sec">
+    <section class="process-sec" id="process">
         <div class="inner pro-inner">
             <div class="pro-title-wrap">
                 <span class="pro-sub-title">
@@ -590,13 +603,13 @@
                 <div class="footer-menu">
                 <strong class="footer-title">바로가기</strong>
                 <ul class="footer-nav">
-                    <li><a href="#">서비스 대상</a></li>
-                    <li><a href="#">강점</a></li>
-                    <li><a href="#">AI상담</a></li>
-                    <li><a href="#">변호사</a></li>
-                    <li><a href="#">진행 절차</a></li>
-                    <li><a href="#">자주 묻는 질문</a></li>
-                    <li><a href="#">오시는 길</a></li>
+                    <li><a href="#hero">서비스 대상</a></li>
+                    <li><a href="#why">장점</a></li>
+                    <li><a href="#chat">AI상담</a></li>
+                    <li><a href="#expertise">변호사</a></li>
+                    <li><a href="#process">진행 절차</a></li>
+                    <li><a href="#faq">자주 묻는 질문</a></li>
+                    <li><a href="#location">오시는 길</a></li>
                 </ul>
                 </div>
             <!-- 연락처 -->
