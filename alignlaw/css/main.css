@@ -535,7 +535,7 @@ header .inner{
 
 /* foryou-sec */
 .foryou-sec {
-    padding: 60px 0;
+    padding: 80px 0 100px;
     background-color: #1c1c1f;
 }
 .foryou-inner {
@@ -835,7 +835,7 @@ header .inner{
 /* why-sec */
 
 .why-sec {
-    padding: 60px 24px;
+    padding: 80px 24px;
     background-color: #0c0c0e;
 }
 .section-title {
@@ -1022,7 +1022,7 @@ header .inner{
 
 /* chet-sec */
 .chat-sec {
-    padding: 60px 24px;
+    padding: 80px 24px;
     background-color: #0c0c0e;
 }
 .chat-sec .inner {
@@ -1257,7 +1257,7 @@ header .inner{
 
 /* team-sec */
 .team-sec {
-    padding: 60px 24px 0;
+    padding: 80px 24px 0;
     /* border: 1px solid #2a2a2e; */
     padding-bottom: 43%;
     background: #1c1c1f url(../img/person.png) no-repeat center bottom / 100%;
@@ -1343,7 +1343,7 @@ header .inner{
 }
 
 .expertise-sec {
-    padding: 60px 24px;
+    padding: 80px 24px;
     background-color: #0c0c0e;
 }
 .expertise-inner {
@@ -1523,7 +1523,7 @@ header .inner{
 /* process-sec */
 
 .process-sec { 
-    padding: 60px 24px; 
+    padding: 80px 24px; 
     border: 1px solid #2a2a2e; 
     background-color: #1c1c1f; 
 } 
@@ -1720,7 +1720,7 @@ header .inner{
 
 /* faq-sec */
 .faq-sec { 
-    padding: 60px 24px; 
+    padding: 80px 24px; 
     background-color: #0c0c0e; 
 } 
 .faq-inner { 
@@ -1922,18 +1922,18 @@ header .inner{
 }
 @media (max-width: 500px) {
     .faq-question span {
-        font-size: 13px;
+        font-size: 15px;
     }
     .faq-answer p {
-        padding: 0 0 20px 26px;
-        font-size: 12px;
+        padding: 0 0 20px 24px;
+        font-size: 14px;
         line-height: 1.65;
     }
 }
 
 /* location-sec */
 .location-sec {
-    padding: 60px 24px;
+    padding: 80px 24px;
     background-color: #0c0c0e;
 }
 .location-inner {
@@ -2002,6 +2002,7 @@ header .inner{
     }
     .location-map {
         width:620px;
+        padding: 18px 20px;
     }
     .location-sub-title {
         margin-bottom:14px;
@@ -2041,7 +2042,7 @@ header .inner{
     }
     .location-map {
         width: 100%;
-        max-width: 100%;
+        /* max-width: 100%; */
         margin: 0 auto;
     }
     .location-info {
@@ -2077,6 +2078,7 @@ header .inner{
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
+        border: none;
     }
     .location-info {
         width: 100%;
@@ -2098,7 +2100,7 @@ header .inner{
 
 .case-sec {
     background-color: #1c1c1f;
-    padding: 60px 24px;
+    padding: 80px 24px;
     border: 1px solid #2a2a2e;
 }
 .case-inner {
@@ -2217,7 +2219,7 @@ header .inner{
 
 .footer-section {
     background-color: #0c0c0e;
-    padding: 60px 24px 0 24px;
+    padding: 80px 24px 0 24px;
 }
 .footer-inner {
     display: flex;
