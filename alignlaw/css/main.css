@@ -774,7 +774,7 @@ header .inner{
         transform: translate(-285%, -220%);
     }
 }
-@media(max-width: 380px) {
+@media(max-width: 412px) {
      .sec-title {
         padding: 0 20px;
     }
