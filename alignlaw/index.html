@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../assets/css/font.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/chatbot.css">
 </head>
 <body>
     <div class="top-bar">
@@ -463,7 +464,7 @@
                     </button>
                     <div class="faq-answer">
                         <p>
-                            초기 상담은 무료로 진행됩니다. AI 사전 상담으로 사오항을 정리한 뒤, 변호사가 사건을 검토하고 진행 방향과 비용을 투명하게 안내해 드립니다.
+                            초기 상담은 무료로 진행됩니다. AI 사전 상담으로 상황을 정리한 뒤, 변호사가 사건을 검토하고 진행 방향과 비용을 투명하게 안내해 드립니다.
                         </p>
                     </div>
                 </div>
@@ -629,5 +630,88 @@
             </div>
         </div>
     </section>
+    <!-- chatbot -->
+    <div class="chatbot-wrap">
+        <button class="chat-toggle">
+            <img src="img/chatbot.png" alt="챗봇" class="chatbot-icon">
+            <span class="close-icon"></span>
+        </button>
+        <div class="chat-window">
+            <!-- header -->
+            <div class="chat-header">
+                <button class="chat-back-btn">
+                    <img src="img/arrow-left.svg" alt="뒤로가기">
+                </button>
+                <div class="chat-header-info">
+                    <p>AI 상담 챗봇</p>
+                    <span>24시간 상담 가능</span>
+                </div>
+            </div>
+            <!-- body -->
+            <div class="chat-body">
+                <!-- step -->
+                 <div class="chat-step">
+                    <span class="step-badge">
+                        STEP 1
+                    </span>
+                    <p>주제 선택</p>
+                 </div>
+                 <!-- bot message -->
+                <div class="chat-message bot">
+                    <div class="chat-profile">
+                        <img src="img/chatbot.png" alt="">
+                    </div>
+                    <div class="chat-message-group">
+                        <div class="chat-bubble">
+                            <p>안녕하세요.</p>
+                            <p>교통 사고 전문 AI 상담입니다.</p>
+                        </div>
+                        <div class="chat-bubble">
+                            <p>어떤 주제가 궁금하신가요?</p>
+                            <p>아래에서 선택하거나 직접 입력해 주세요.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- menu -->
+                <div class="chat-menu">
+                    <button class="chat-menu-btn">
+                        <div>
+                            <strong>과실 검토</strong>
+                            <span>과실비율이 억울해요.</span>
+                        </div>
+                        <img src="img/arrow-right.svg" alt="">
+                    </button>
+                    <button class="chat-menu-btn">
+                        <div>
+                            <strong>합의 상담</strong>
+                            <span>보험사 합의, 언제 해야 하나요?</span>
+                        </div>
+                        <img src="img/arrow-right.svg" alt="">
+                    </button>
+                    <button class="chat-menu-btn">
+                        <div>
+                            <strong>치료 가이드</strong>
+                            <span>병원 치료는 얼마나 받아야 하나요?</span>
+                        </div>
+                        <img src="img/arrow-right.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="chat-footer">
+                <input type="text" placeholder="메세지를 입력 해주세요.">
+                <button class="chat-send-btn">↑</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const chatToggle = document.querySelector(".chat-toggle");
+        const chatWindow = document.querySelector(".chat-window");
+
+        chatToggle.addEventListener("click", () => {
+            chatToggle.classList.toggle("active");
+            chatWindow.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
