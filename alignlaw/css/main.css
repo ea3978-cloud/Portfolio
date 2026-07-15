@@ -713,13 +713,13 @@ header .inner{
         transform: translate(-165%, 75%);
     }
     .item03 {
-        transform: translate(-390%, 75%);
+        transform: translate(-390%, 80%);
     }
     .item04 {
         transform: translate(-440%, -100%);
     }
     .item05 {
-        transform: translate(-280%, -215%);
+        transform: translate(-283%, -220%);
     }
 }
 @media (max-width: 680px) {
@@ -759,13 +759,13 @@ header .inner{
         font-size: 8px;
     }
     .item01 {
-        transform: translate(-120%, -90%);
+        transform: translate(-120%, -88%);
     }
     .item02 {
-        transform: translate(-180%, 85%);
+        transform: translate(-175%, 90%);
     }
     .item03 {
-        transform: translate(-390%, 90%);
+        transform: translate(-395%, 90%);
     }
     .item04 {
         transform: translate(-455%, -90%);
@@ -816,19 +816,19 @@ header .inner{
         font-size: 7px;
     }
     .item01 {
-        transform: translate(-105%, -90%);
+        transform: translate(-105%, -86%);
     }
     .item02 {
-        transform: translate(-145%, 85%);
+        transform: translate(-143%, 88%);
     }
     .item03 {
-        transform: translate(-335%, 90%);
+        transform: translate(-337%, 88%);
     }
     .item04 {
-        transform: translate(-380%, -90%);
+        transform: translate(-385%, -85%);
     }
     .item05 {
-        transform: translate(-250%, -195%);
+        transform: translate(-247%, -195%);
     }
 }
 
