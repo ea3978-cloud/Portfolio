@@ -543,7 +543,7 @@ header .inner{
 }
 .sec-title {
     text-align: center;
-    margin-top: 104px;
+    /* margin-top: 104px; */
 }
 .sub-title {
     display: block;
@@ -1341,7 +1341,7 @@ header .inner{
     .team-tag span{
         height: 30px;
         padding: 6px 14px;
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 @media (max-width: 480px) {
