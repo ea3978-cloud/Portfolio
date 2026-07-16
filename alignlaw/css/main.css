@@ -119,6 +119,9 @@ header .inner{
     display: inline-block;
     padding: 12px 0;
 }
+.gnb a:hover {
+    color: #c9a24e;
+}
 .header-btn{
     width:180px;
     display:flex;
@@ -205,6 +208,9 @@ header .inner{
     }
     .gnb ul {
         flex-direction: column;
+    }
+    .gnb a:hover {
+        color: #c9a24e;
     }
     .header-btn {
         display: none;
