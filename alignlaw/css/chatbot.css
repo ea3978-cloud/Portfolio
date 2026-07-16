@@ -140,7 +140,7 @@
         width: 476px;
     }
 }
-@media (max-width: 380px) {
+@media (max-width: 412px) {
     .chatbot-wrap {
         right: 10px;
         bottom: 10px;
@@ -154,8 +154,8 @@
         width: 24px;
     }
     .chat-window {
-        right: -5px;
-        width: 370px;
+        right: -4px;
+        width: 400px;
         height: 680px;
     }
 }
