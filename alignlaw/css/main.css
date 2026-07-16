@@ -30,7 +30,7 @@
 }
 
 @media(max-width: 1680px){
-    .top-bar.inner{
+    .top-bar.inner {
         padding: 0 30px;;
     }
 }
@@ -41,19 +41,19 @@
     .top-bar {font-size: 12px;}
 }
 @media(max-width:500px){
-    .top-bar .inner{
+    .top-bar .inner {
         flex-direction: column;
-        justify-content:center;
+        justify-content: center;
         padding-top: 4px;
         padding-bottom: 4px;
     }
     .top-left {
         display: none;
     }
-    .gap{
-        margin:0;
-        font-size:16px;
-        font-weight:700;
+    .gap {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
     }
 }
 
@@ -64,7 +64,6 @@
 }
 
 /* header */
-
 header{
     width: 100%;
     padding: 10px 20px;
@@ -528,10 +527,7 @@ header .inner{
     .hero-info span {
         font-size: 15px;
     }
-   
-    
 }
-
 
 /* foryou-sec */
 .foryou-sec {
@@ -833,7 +829,6 @@ header .inner{
 }
 
 /* why-sec */
-
 .why-sec {
     padding: 80px 24px;
     background-color: #0c0c0e;
@@ -1254,11 +1249,9 @@ header .inner{
     }
 }
     
-
 /* team-sec */
 .team-sec {
     padding: 80px 24px 0;
-    /* border: 1px solid #2a2a2e; */
     padding-bottom: 43%;
     background: #1c1c1f url(../img/person.png) no-repeat center bottom / 100%;
 }
