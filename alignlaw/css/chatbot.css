@@ -138,6 +138,24 @@
     .chat-window {
         right: -7px;
         width: 476px;
-        
+    }
+}
+@media (max-width: 380px) {
+    .chatbot-wrap {
+        right: 10px;
+        bottom: 10px;
+    }
+    .chat-toggle {
+        width: 50px;
+        height: 50px;
+    }
+    .close-icon::before,
+    .close-icon::after {
+        width: 24px;
+    }
+    .chat-window {
+        right: -5px;
+        width: 370px;
+        height: 680px;
     }
 }
