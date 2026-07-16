@@ -2083,7 +2083,6 @@ header .inner{
         max-width: 100%;
         margin: 0 auto;
         border: none;
-        scale: 1.13;
     }
     .location-info {
         width: 100%;
@@ -2098,6 +2097,15 @@ header .inner{
     .location-text p {
         font-size: 15px;
         line-height: 1.7;
+    }
+}
+@media (max-width: 500px) {
+    .location-map {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        border: none;
+        scale: 1.13;
     }
 }
 
