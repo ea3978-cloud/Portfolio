@@ -116,9 +116,9 @@
         height: 3px;
     }
     .chat-window {
-        right: -4px;
+        right: -6px;
         bottom: 65px;
-        width: 640px;
+        width: 660px;
         height: 760px;
     }
 }
@@ -136,8 +136,8 @@
         width: 26px;
     }
     .chat-window {
-        right: -7px;
-        width: 476px;
+        right: -2px;
+        width: 480px;
     }
 }
 @media (max-width: 412px) {
