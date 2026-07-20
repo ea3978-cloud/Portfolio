@@ -19,21 +19,21 @@
     <link rel="stylesheet" href="css/chatbot.css">
 </head>
 <body>
-    <div class="top-bar">
-        <div class="inner">
-            <div class="top-left">
-                <span>평일 09:00~ 20:00 ·</span>
-                <span>야간/주말 상담 가능 ·</span>
-                <span>365일 연중무휴 운영</span>
-            </div>
-            <div class="top-right">
-                <span>상담문의</span>
-                <a href="tel:02-4562-1687" class="gap">02-4562-1687</a>
-                <span>비대면 상담 가능</span>
+    <header id="header">
+        <div class="top-bar">
+            <div class="inner">
+                <div class="top-left">
+                    <span>평일 09:00~ 20:00 ·</span>
+                    <span>야간/주말 상담 가능 ·</span>
+                    <span>365일 연중무휴 운영</span>
+                </div>
+                <div class="top-right">
+                    <span>상담문의</span>
+                    <a href="tel:02-4562-1687" class="gap">02-4562-1687</a>
+                    <span>비대면 상담 가능</span>
+                </div>
             </div>
         </div>
-    </div>
-    <header id="header">
         <div class="inner">
             <h1 class="logo">
                 <a href="#">
@@ -55,7 +55,7 @@
                     <li><a href="#location">오시는 길</a></li>
                 </ul>
             </nav>
-            <div class="header-btn">
+            <div class="header-btn open-chat">
                 <a href="#">무료 상담 시작</a>
             </div>
             <button class="menu-btn" type="button" aria-label="메뉴 열기">
@@ -65,533 +65,482 @@
             </button>
         </div>
     </header>
-    <script>
-            const menuBtn = document.querySelector(".menu-btn");
-            const gnb = document.querySelector(".gnb");
-
-            menuBtn.addEventListener("click", () => {
-                menuBtn.classList.toggle("is-open");
-                gnb.classList.toggle("is-open");
-
-                if(menuBtn.classList.contains("is-open")) {
-                console.log("열려있어!")
-                }   else {
-                console.log("닫혀있어!")
-                }
-            })
-            
-            const gnbLink = document.querySelectorAll(".gnb a");
-            gnbLink.forEach((link) => {
-                link.addEventListener("click",() =>{
-                    menuBtn.classList.remove("is-open");
-                    gnb.classList.remove("is-open");
-                })
-            })
-    </script>
-    <section class="hero-sec" id="hero">
+    <main>
+        <section class="hero-sec" id="hero">
+                <div class="inner">
+                    <div class="hero-content">
+                        <div class="tag">
+                            교통사고·보험 분쟁·합의/소송 전문
+                        </div>
+                        <h1>사고 이후,가장 먼저 필요한 것은<br>올바른 <span>법률 판단</span>입니다.</h1>
+                        <p>보헙사와의 합의, 정당한 보상, 복잡한 절차. 법률사무소 얼라인은 교통사고 사건에 집중하여,<br>사고 직후 상담부터 합의·소송까지 한 곳에서 함께합니다.</p>
+                        <div class="hero-btn">
+                            <!-- <a href="#" class="btn btn-gold open-chat">
+                                <span>무료 상담 시작</span>
+                                <span>→</span>
+                            </a> -->
+                            <a href="#" class="btn btn-dark open-chat">AI 상담 시작</a>
+                        </div>
+                        <ul class="hero-info">
+                            <li>
+                                <img class="icon" src="img/check.svg" alt="">
+                                <span>교통사고 사건 집중</span>
+                            </li>
+                            <li>
+                                <img class="icon" src="img/check.svg" alt="">
+                                <span>AI 사전 상담</span>
+                            </li>
+                            <li>
+                                <img class="icon" src="img/check.svg" alt="">
+                                <span>합의부터 소송까지</span>
+                            </li>
+                        </ul>                    
+                    </div>
+                    <div class="hero-img">
+                        <img src="img/head.png" alt="">
+                        <div class="career-box">
+                            <strong class="career-num">1:1</strong>
+                            <span>사건별 맞춤<br><strong class="career-txt">법률 전략 수립</strong></span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="foryou-sec">
+            <div class="foryou-inner">
+                <div class="sec-title">
+                    <span class="sub-title">FOR YOU</span>
+                    <h2>이런 분들을 위해 준비했습니다</h2>
+                    <p>혼자 고민하지 마세요.법률사무소 얼라인은 다음과 같은 분들의 정당한 보상을 돕습니다.</p>
+                </div>
+                <div class="circle">
+                    <div class="circle-bg-outline"></div>
+                    <div class="circle-bg"></div>
+                    <div class="center-txt">
+                        <p class="sub-txt">이런 분들의</p>
+                        <p>상담을 돕습니다</p>
+                    </div>
+                    <div class="item item01">
+                        <p>보험사 합의가<br>불안</p>
+                    </div>
+                    <div class="item item02">
+                        <p>사고 후<br>정당한 보상</p>
+                    </div>
+                    <div class="item item03">
+                        <p>변호사 상담이<br>부담</p>
+                    </div>
+                    <div class="item item04">
+                        <p>빠른<br>전문가 상담</p>
+                    </div>
+                    <div class="item item05 active">
+                        <p>주요 대상</p>
+                        <p class="first">합의가<br>처음이라</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="why-sec" id="why">
             <div class="inner">
-                <div class="hero-content">
-                    <div class="tag">
-                        교통사고·보험 분쟁·합의/소송 전문
-                    </div>
-                    <h1>사고 이후,가장 먼저 필요한 것은<br>올바른 <span>법률 판단</span>입니다.</h1>
-                    <p>보헙사와의 합의, 정당한 보상, 복잡한 절차. 법률사무소 얼라인은 교통사고 사건에 집중하여,<br>사고 직후 상담부터 합의·소송까지 한 곳에서 함께합니다.</p>
-                    <div class="hero-btn">
-                        <a href="#" class="btn btn-gold open-chat">
-                            <span>무료 상담 시작</span>
-                            <span>→</span>
-                        </a>
-                        <a href="#" class="btn btn-dark open-chat">AI 상담 시작</a>
-                    </div>
-                    <ul class="hero-info">
-                        <li>
-                            <img class="icon" src="img/check.svg" alt="">
-                            <span>교통사고 사건 집중</span>
-                        </li>
-                        <li>
-                            <img class="icon" src="img/check.svg" alt="">
-                            <span>AI 사전 상담</span>
-                        </li>
-                        <li>
-                            <img class="icon" src="img/check.svg" alt="">
-                            <span>합의부터 소송까지</span>
-                        </li>
-                    </ul>                    
+                <div class="section-title">
+                    <span class="why-sub-title">WHY ALIGN LAW</span>
+                    <h2 class="sub-tit">얼라인만의 세 가지 장점</h2>
                 </div>
-                <div class="hero-img">
-                    <img src="img/head.png" alt="">
-                    <div class="career-box">
-                        <strong class="career-num">1:1</strong>
-                        <span>사건별 맞춤<br><strong class="career-txt">법률 전략 수립</strong></span>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section class="foryou-sec">
-        <div class="foryou-inner">
-            <div class="sec-title">
-                <span class="sub-title">FOR YOU</span>
-                <h2>이런 분들을 위해 준비했습니다</h2>
-                <p>혼자 고민하지 마세요.법률사무소 얼라인은 다음과 같은 분들의 정당한 보상을 돕습니다.</p>
-            </div>
-            <div class="circle">
-                <div class="circle-bg-outline"></div>
-                <div class="circle-bg"></div>
-                <div class="center-txt">
-                    <p class="sub-txt">이런 분들의</p>
-                    <p>상담을 돕습니다</p>
-                </div>
-                <div class="item item01">
-                    <p>보험사 합의가<br>불안</p>
-                </div>
-                <div class="item item02">
-                    <p>사고 후<br>정당한 보상</p>
-                </div>
-                <div class="item item03">
-                    <p>변호사 상담이<br>부담</p>
-                </div>
-                <div class="item item04">
-                    <p>빠른<br>전문가 상담</p>
-                </div>
-                <div class="item item05 active">
-                    <p>주요 대상</p>
-                    <p class="first">합의가<br>처음이라</p>
-                </div>
-            </div>
-        </div>
-    <script>
-            const items = document.querySelectorAll('.item');
-            let currentIndex = 4; // item05(인덱스 4)에서 시작
-
-            setInterval(() => {
-                // 현재 active 제거
-                items[currentIndex].classList.remove('active');
-                
-                // 다음 인덱스 계산 (순환)
-                currentIndex = (currentIndex + 1) % items.length;
-                
-                // 새로운 active 추가
-                items[currentIndex].classList.add('active');
-            }, 2000);
-    </script>
-    </section>
-    <section class="why-sec" id="why">
-        <div class="inner">
-            <div class="section-title">
-                <span class="why-sub-title">WHY ALIGN LAW</span>
-                <h2 class="sub-tit">얼라인만의 세 가지 장점</h2>
-            </div>
-            <ul class="why-list">
-                <li>
-                    <div class="why-top">
-                        <div class="why-icon">
-                            <img src="img/icon01.svg" alt="">
+                <ul class="why-list">
+                    <li>
+                        <div class="why-top">
+                            <div class="why-icon">
+                                <img src="img/icon01.svg" alt="">
+                            </div>
+                            <span class="why-num">01</span>
                         </div>
-                        <span class="why-num">01</span>
-                    </div>
-                    <h3 class="why-title">교통사고 사건 집중</h3>
-                    <p>수많은 분야를 다루지 않습니다.<br>교통사고·보험 분쟁을 중심으로 깊이 있게 상담하고 대응합니다.</p>
-                </li>
-                <li>
-                    <div class="why-top">
-                        <div class="why-icon">
-                            <img src="img/icon02.svg" alt="">
+                        <h3 class="why-title">교통사고 사건 집중</h3>
+                        <p>수많은 분야를 다루지 않습니다.<br>교통사고·보험 분쟁을 중심으로 깊이 있게 상담하고 대응합니다.</p>
+                    </li>
+                    <li>
+                        <div class="why-top">
+                            <div class="why-icon">
+                                <img src="img/icon02.svg" alt="">
+                            </div>
+                            <span class="why-num">02</span>
                         </div>
-                        <span class="why-num">02</span>
-                    </div>
-                    <h3 class="why-title">AI 사전 상담</h3>
-                    <p>변호사를 만나기 전, 챗봇으로 현재 상황을 정리합니다.<br>더 빠르고 정확한 상담이 가능합니다.</p>
-                </li>
-                <li>
-                    <div class="why-top">
-                        <div class="why-icon">
-                            <img src="img/icon03.svg" alt="">
+                        <h3 class="why-title">AI 사전 상담</h3>
+                        <p>변호사를 만나기 전, 챗봇으로 현재 상황을 정리합니다.<br>더 빠르고 정확한 상담이 가능합니다.</p>
+                    </li>
+                    <li>
+                        <div class="why-top">
+                            <div class="why-icon">
+                                <img src="img/icon03.svg" alt="">
+                            </div>
+                            <span class="why-num">03</span>
                         </div>
-                        <span class="why-num">03</span>
-                    </div>
-                    <h3 class="why-title">처음부터 끝까지 함께</h3>
-                    <p>사고 직후 상담부터 합의, 소송까지. 흩어진 절차를 한 곳에서 끝까지<br>진행할 수 있습니다.</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="chat-sec" id="chat">
-        <div class="inner">
-        <!-- 왼쪽 -->
-            <div class="chat-content">
-                <span class="chat-sub-title">
-                    AI PRE-CONSULTATION
-                </span>
-                <h2 class="chat-title">변호사 상담 전,<br><strong>AI 챗봇</strong>이 먼저 돕습니다</h2>
-                <p class="chat-desc">
-                    막막한 첫 질문, AI 챗봇에게 편하게 물어보세요.현재 상황을 정리해 두면 변호사 상담이 <br>더 빠르고 정확해집니다. 이런 질문에 바로 답해 드립니다.
-                </p>
-                <ul class="question-list">
-                    <li>
-                        <span>Q1</span>
-                        <p>교통사고 합의금은 얼마나 받을 수 있나요?</p>
-                    </li>
-                    <li>
-                        <span>Q2</span>
-                        <p>보험사에서 합의하자고 하는데 바로 해도 되나요?</p>
-                    </li>
-                    <li>
-                        <span>Q3</span>
-                        <p>사고 후 병원 치료는 얼마나 받아야 하나요?</p>
-                    </li>
-                </ul>
-                <a href="#" class="chat-btn open-chat">
-                    <span>AI 상담 시작</span>
-                    <span>→</span>
-                </a>
-            </div>
-            <!-- 오른쪽 -->
-            <div class="chat-box">
-                <div class="chat-header">
-                    <div class="chat-profile">
-                        <div class="chat-icon">
-                            <img src="img/icon04.svg" alt="">
-                        </div>
-                        <div class="chat-info">
-                            <strong>얼라인 AI 상담</strong>
-                            <span>●</span>
-                            <span>응답 가능</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="chat-body">
-                    <div class="msg user">
-                        <p>교통사고 합의금은 얼마나 받을 수 있나요?</p>
-                    </div>
-                    <div class="msg bot">
-                        <p>
-                            치료비·위자료·휴업손해 등 항목별로 산정됩니다. 진단명과 치료 기간을<br> 알려주시면 예상 범위를 안내해 드릴게요. 
-                        </p>
-                    </div>
-                    <div class="msg user">
-                        <p>보험사에서 합의하자는데 바로 해도 되나요?</p>
-                    </div>
-                    <div class="msg bot">
-                        <p>
-                            치료가 끝나기 전 합의는 신중해야 합니다. 합의 전 변호사 검토를 받으시<br>는 것을 권해 드려요.
-                        </p>
-                    </div>
-                    <div class="typing">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="team-sec">
-        <div class="team-inner">
-            <div class="section-tit">
-                <span class="team-sub-title">
-                    OUR TEAM
-                </span>
-                <h2 class="team-title">ALIGN LAW 변호사진</h2>
-                <p>교통사고와 보험 분쟁을 전문으로 하는 변호사들이 함께합니다. 풍부한 사건 경험을 바탕으로,<br>의뢰인 한 분 한 분의 정당한 보상을 끝까지 책임집니다.</p>
-            </div>
-            <ul class="team-tag">
-                <li>
-                    <span># 교통사고 전문</span>
-                </li>
-                <li>
-                    <span># 보험 분쟁 대응</span>
-                </li>
-                <li>
-                    <span># 1:1 사건 관리</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="expertise-sec" id="expertise">
-        <div class="inner expertise-inner">
-            <div class="expertise-content">
-                <div class="absolute">
-                    <span class="expertise-sub-title">
-                        OUR EXPERTISE
-                    </span>
-                    <h2 class="expertise-title">
-                        이강준 <strong class="expertise-highlight">대표변호사</strong>
-                    </h2>
-                    <strong class="expertise-career">
-                        교통사고 전문 변호사 · 사건 경력 18년
-                    </strong>
-                </div>
-                <p class="expertise-desc">
-                    교통사고와 보험 분쟁 해결에 18년을 집중해 온 변호사입니다.
-                    정확한 사건 분석과 1:1 맞춤 전략으로
-                    의뢰인의 정당한 보상을 책임집니다.
-                </p>
-                <ul class="expertise-list">
-                    <li>
-                        <img src="img/check.svg" alt="">
-                        <span>대한변호사협회 등록 변호사 (교통사고 분야)</span>
-                    </li>
-                    <li>
-                        <img src="img/check.svg" alt="">
-                        <span>손해보험·자동차보험 분쟁 다수 자문</span>
-                    </li>
-                    <li>
-                        <img src="img/check.svg" alt="">
-                        <span>교통사고 손해배상 소송 다수 수행</span>
-                    </li>
-                    <li>
-                        <img src="img/check.svg" alt="">
-                        <span>합의금·보험금 사건 전문 자문</span>
-                    </li>
-                    <li>
-                        <img src="img/check.svg" alt="">
-                        <span>보험사 대응 및 협상 전략 전문</span>
-                    </li>
-                    <li>
-                        <img src="img/check.svg" alt="">
-                        <span>의뢰인 맞춤 1:1 사건 전략 수립</span>
-                    </li>
-                    <li>
-                        <img src="img/check.svg" alt="">
-                        <span>사고 직후부터 종결까지 원스톱 진행</span>
-                    </li>
-                    <li>
-                        <img src="img/check.svg" alt="">
-                        <span>교통사고 분야 다수 승소사례 보유</span>
+                        <h3 class="why-title">처음부터 끝까지 함께</h3>
+                        <p>사고 직후 상담부터 합의, 소송까지. 흩어진 절차를 한 곳에서 끝까지<br>진행할 수 있습니다.</p>
                     </li>
                 </ul>
             </div>
-            <div class="expertise-photo">
-                <img src="img/head.png" alt="대표변호사">
-                <div class="expertise-card">
-                    <strong>이강준 대표변호사</strong>
-                    <span>교통사고 전문 변호사</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="process-sec" id="process">
-        <div class="inner pro-inner">
-            <div class="pro-title-wrap">
-                <span class="pro-sub-title">
-                    PROCESS
-                </span>
-                <h2 class="pro-title">
-                    상담은 이렇게 진행됩니다
-                </h2>
-                <p class="pro-desc">
-                    AI 사전 상담부터 합의·소송까지, 사건의 전 과정을 함께합니다.
-                </p>
-            </div>
-            <ul class="pro-list">
-                <li class="pro-item">
-                    <div class="pro-top">
-                        <span class="pro-num">1</span>
-                        <span class="pro-step">STEP 01</span>
-                    </div>
-                    <h3 class="pro-item-title">
-                        AI 사전 상담
-                    </h3>
-                    <p class="pro-item-desc">
-                        챗봇으로 현재 상황과 사고 내용을 정리합니다.
-                    </p>
-                    <img class="pro-arrow" src="img/arrow-right.svg" alt="">
-                </li>
-                <li class="pro-item">
-                    <div class="pro-top">
-                        <span class="pro-num">2</span>
-                        <span class="pro-step">STEP 02</span>
-                    </div>
-                    <h3 class="pro-item-title">
-                        변호사 상담
-                    </h3>
-                    <p class="pro-item-desc">
-                        전문 변호사가 사건을 진단하고 방향을<br>제시합니다.
-                    </p>
-                    <img class="pro-arrow" src="img/arrow-right.svg" alt="">
-                </li>
-                <li class="pro-item">
-                    <div class="pro-top">
-                        <span class="pro-num">3</span>
-                        <span class="pro-step">STEP 03</span>
-                    </div>
-                    <h3 class="pro-item-title">
-                        합의·협상
-                    </h3>
-                    <p class="pro-item-desc">
-                        보험사에 맞서 정당한 보상을 위해 협상합니다.
-                    </p>
-                    <img class="pro-arrow" src="img/arrow-right.svg" alt="">
-                </li>
-                <li class="pro-item">
-                    <div class="pro-top">
-                        <span class="pro-num">4</span>
-                        <span class="pro-step">STEP 04</span>
-                    </div>
-                    <h3 class="pro-item-title">
-                        소송 진행
-                    </h3>
-                    <p class="pro-item-desc">
-                        합의가 어려우면 소송까지 끝까지 함께 합니다.
-                    </p>
-                </li>
-            </ul>
-            <a href="#" class="pro-btn open-chat">
-                <span>내 사건 진단받기</span>
-                <span>→</span>
-            </a>
-        </div>
-    </section>
-    <section class="faq-sec" id="faq">
-        <div class="inner faq-inner">
+        </section>
+        <section class="chat-sec" id="chat">
+            <div class="inner">
             <!-- 왼쪽 -->
-             <div class="faq-content">
-                <span class="faq-sub-title">FAQ</span>
-                <h2 class="faq-title">자주 묻는 질문</h2>
-                <p class="faq-desc">
-                    궁금한 점을 먼저 확인해 보세요. 더 자세한 내용은 상담으로 안내해 드립니다.
-                </p>
-                <div class="faq-call">
-                    <strong>Q&A</strong>
-                    <div class="faq-call-info">
-                        <span>상담문의</span>
-                        <p>02-4562-1687</p>
-                    </div>
-                </div>
-             </div>
-            <!-- 오른쪽 -->
-             <div class="faq-list">
-                <div class="faq-item active">
-                    <button class="faq-question">
-                        <span>
-                            <strong>Q</strong>
-                            상담 비용이 있나요?
-                        </span>
-                        <img src="img/arrow-bot.svg" alt="">
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            초기 상담은 무료로 진행됩니다. AI 사전 상담으로 상황을 정리한 뒤, 변호사가 사건을 검토하고 진행 방향과 비용을 투명하게 안내해 드립니다.
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>
-                            <strong>Q</strong>
-                            보험사가 제시한 합의금,<br class="mobile-br">적정한지 알 수 있나요?
-                        </span>
-                        <img src="img/arrow-bot.svg" alt="">
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            가능합니다. 사고 내용과 치료기록 등을 검토하여 적정한 보상인지 확인해드립니다.
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>
-                            <strong>Q</strong>
-                            사고 직후 바로 상담받아도 되나요?
-                        </span>
-                        <img src="img/arrow-bot.svg" alt="">
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            네. 사고 직후 상담할수록 증거 확보와 대응 전략 수립에 도움이 됩니다.
-                        </p>
-                    </div>
-                </div>
-             </div>
-        </div>
-        <script>
-            const faqItems = document.querySelectorAll(".faq-item");
-
-            faqItems.forEach(item => {
-                const btn = item.querySelector(".faq-question");
-                btn.addEventListener("click",()=>{
-                    faqItems.forEach(el=>{
-                        if(el !== item){
-                            el.classList.remove("active");
-                        }
-                    });
-                    item.classList.toggle("active");
-                });
-            });
-        </script>
-    </section>
-    <section class="location-sec" id="location">
-        <div class="inner">
-             <!-- 왼쪽 -->
-                <div class="location-title-wrap">
-                    <span class="location-sub-title">
-                        LOCATION
+                <div class="chat-content">
+                    <span class="chat-sub-title">
+                        AI PRE-CONSULTATION
                     </span>
-                    <h2 class="location-title">
-                        오시는 길
-                    </h2>
+                    <h2 class="chat-title">변호사 상담 전,<br><strong>AI 챗봇</strong>이 먼저 돕습니다</h2>
+                    <p class="chat-desc">
+                        막막한 첫 질문, AI 챗봇에게 편하게 물어보세요.현재 상황을 정리해 두면 변호사 상담이 <br>더 빠르고 정확해집니다. 이런 질문에 바로 답해 드립니다.
+                    </p>
+                    <ul class="question-list">
+                        <li>
+                            <span>Q1</span>
+                            <p>교통사고 합의금은 얼마나 받을 수 있나요?</p>
+                        </li>
+                        <li>
+                            <span>Q2</span>
+                            <p>보험사에서 합의하자고 하는데 바로 해도 되나요?</p>
+                        </li>
+                        <li>
+                            <span>Q3</span>
+                            <p>사고 후 병원 치료는 얼마나 받아야 하나요?</p>
+                        </li>
+                    </ul>
+                    <a href="#" class="chat-btn open-chat">
+                        <span>AI 상담 시작</span>
+                        <span>→</span>
+                    </a>
                 </div>
-                <div class="location-inner">
-                    <div class="location-map">
-                        <img src="img/map.png" alt="오시는 길">
-                    </div>
-                        <!-- 오른쪽 -->
-                        <div class="location-info">
-                            <div class="location-item">
-                                <span class="location-label">주소</span>
-                                <div class="location-text">
-                                    <p>서울특별시 동작구 노량진로 116</p>
-                                    <p>백이빌딩 5층 (노량진역 인근)</p>
-                                </div>
+                <!-- 오른쪽 -->
+                <div class="chat-box">
+                    <div class="chat-header">
+                        <div class="chat-profile">
+                            <div class="chat-icon">
+                                <img src="img/icon04.svg" alt="">
                             </div>
-                            <div class="location-item">
-                                <span class="location-label">상담시간</span>
-                                <div class="location-text">
-                                    <p>평일 09:00 ~ 20:00</p>
-                                    <p>야간 · 주말 상담 가능 (예약제)</p>
-                                    <p>비대면 상담 가능</p>
-                                </div>
-                            </div>
-                            <div class="location-item">
-                                <span class="location-label">전화</span>
-                                <div class="location-text">
-                                    <p>02-4562-1687</p>
-                                </div>
-                            </div>
-                            <div class="location-item">
-                                <span class="location-label">교통</span>
-                                <div class="location-text">
-                                    <p>노량진역 6번 출구 도보 3분</p>
-                                    <p>건물 내 주차 가능</p>
-                                </div>
+                            <div class="chat-info">
+                                <strong>얼라인 AI 상담</strong>
+                                <span>●</span>
+                                <span>응답 가능</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="chat-body">
+                        <div class="msg user">
+                            <p>교통사고 합의금은 얼마나 받을 수 있나요?</p>
+                        </div>
+                        <div class="msg bot">
+                            <p>
+                                치료비·위자료·휴업손해 등 항목별로 산정됩니다. 진단명과 치료 기간을<br> 알려주시면 예상 범위를 안내해 드릴게요. 
+                            </p>
+                        </div>
+                        <div class="msg user">
+                            <p>보험사에서 합의하자는데 바로 해도 되나요?</p>
+                        </div>
+                        <div class="msg bot">
+                            <p>
+                                치료가 끝나기 전 합의는 신중해야 합니다. 합의 전 변호사 검토를 받으시<br>는 것을 권해 드려요.
+                            </p>
+                        </div>
+                        <div class="typing">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    </div>
                 </div>
-        </div>
-    </section>
-    <section class="case-sec">
-        <div class="inner case-inner">
-            <span class="case-sub-title">
-                START YOUR CASE
-            </span>
-            <h2 class="case-title">
-                사고 이후, 가장 먼저 변호사와 상담하세요.
-            </h2>
-            <p class="case-desc">
-                무료 상담으로 내 사건의 보상 방향을 확인해 보세요.<br>
-                AI 챗봇으로 부담 없이 먼저 시작하셔도 좋습니다.
-            </p>
-            <div class="case-btn-wrap">
-                <a href="#" class="case-btn case-btn-free open-chat">
-                    <span>무료 상담 시작하기</span>
+            </div>
+        </section>
+        <section class="team-sec">
+            <div class="team-inner">
+                <div class="section-tit">
+                    <span class="team-sub-title">
+                        OUR TEAM
+                    </span>
+                    <h2 class="team-title">ALIGN LAW 변호사진</h2>
+                    <p>교통사고와 보험 분쟁을 전문으로 하는 변호사들이 함께합니다. 풍부한 사건 경험을 바탕으로,<br>의뢰인 한 분 한 분의 정당한 보상을 끝까지 책임집니다.</p>
+                </div>
+                <ul class="team-tag">
+                    <li>
+                        <span># 교통사고 전문</span>
+                    </li>
+                    <li>
+                        <span># 보험 분쟁 대응</span>
+                    </li>
+                    <li>
+                        <span># 1:1 사건 관리</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="expertise-sec" id="expertise">
+            <div class="inner expertise-inner">
+                <div class="expertise-content">
+                    <div class="absolute">
+                        <span class="expertise-sub-title">
+                            OUR EXPERTISE
+                        </span>
+                        <h2 class="expertise-title">
+                            이강준 <strong class="expertise-highlight">대표변호사</strong>
+                        </h2>
+                        <strong class="expertise-career">
+                            교통사고 전문 변호사 · 사건 경력 18년
+                        </strong>
+                    </div>
+                    <p class="expertise-desc">
+                        교통사고와 보험 분쟁 해결에 18년을 집중해 온 변호사입니다.
+                        정확한 사건 분석과 1:1 맞춤 전략으로
+                        의뢰인의 정당한 보상을 책임집니다.
+                    </p>
+                    <ul class="expertise-list">
+                        <li>
+                            <img src="img/check.svg" alt="">
+                            <span>대한변호사협회 등록 변호사 (교통사고 분야)</span>
+                        </li>
+                        <li>
+                            <img src="img/check.svg" alt="">
+                            <span>손해보험·자동차보험 분쟁 다수 자문</span>
+                        </li>
+                        <li>
+                            <img src="img/check.svg" alt="">
+                            <span>교통사고 손해배상 소송 다수 수행</span>
+                        </li>
+                        <li>
+                            <img src="img/check.svg" alt="">
+                            <span>합의금·보험금 사건 전문 자문</span>
+                        </li>
+                        <li>
+                            <img src="img/check.svg" alt="">
+                            <span>보험사 대응 및 협상 전략 전문</span>
+                        </li>
+                        <li>
+                            <img src="img/check.svg" alt="">
+                            <span>의뢰인 맞춤 1:1 사건 전략 수립</span>
+                        </li>
+                        <li>
+                            <img src="img/check.svg" alt="">
+                            <span>사고 직후부터 종결까지 원스톱 진행</span>
+                        </li>
+                        <li>
+                            <img src="img/check.svg" alt="">
+                            <span>교통사고 분야 다수 승소사례 보유</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="expertise-photo">
+                    <img src="img/head.png" alt="대표변호사">
+                    <div class="expertise-card">
+                        <strong>이강준 대표변호사</strong>
+                        <span>교통사고 전문 변호사</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="process-sec" id="process">
+            <div class="inner pro-inner">
+                <div class="pro-title-wrap">
+                    <span class="pro-sub-title">
+                        PROCESS
+                    </span>
+                    <h2 class="pro-title">
+                        상담은 이렇게 진행됩니다
+                    </h2>
+                    <p class="pro-desc">
+                        AI 사전 상담부터 합의·소송까지, 사건의 전 과정을 함께합니다.
+                    </p>
+                </div>
+                <ul class="pro-list">
+                    <li class="pro-item">
+                        <div class="pro-top">
+                            <span class="pro-num">1</span>
+                            <span class="pro-step">STEP 01</span>
+                        </div>
+                        <h3 class="pro-item-title">
+                            AI 사전 상담
+                        </h3>
+                        <p class="pro-item-desc">
+                            챗봇으로 현재 상황과 사고 내용을 정리합니다.
+                        </p>
+                        <img class="pro-arrow" src="img/arrow-right.svg" alt="">
+                    </li>
+                    <li class="pro-item">
+                        <div class="pro-top">
+                            <span class="pro-num">2</span>
+                            <span class="pro-step">STEP 02</span>
+                        </div>
+                        <h3 class="pro-item-title">
+                            변호사 상담
+                        </h3>
+                        <p class="pro-item-desc">
+                            전문 변호사가 사건을 진단하고 방향을<br>제시합니다.
+                        </p>
+                        <img class="pro-arrow" src="img/arrow-right.svg" alt="">
+                    </li>
+                    <li class="pro-item">
+                        <div class="pro-top">
+                            <span class="pro-num">3</span>
+                            <span class="pro-step">STEP 03</span>
+                        </div>
+                        <h3 class="pro-item-title">
+                            합의·협상
+                        </h3>
+                        <p class="pro-item-desc">
+                            보험사에 맞서 정당한 보상을 위해 협상합니다.
+                        </p>
+                        <img class="pro-arrow" src="img/arrow-right.svg" alt="">
+                    </li>
+                    <li class="pro-item">
+                        <div class="pro-top">
+                            <span class="pro-num">4</span>
+                            <span class="pro-step">STEP 04</span>
+                        </div>
+                        <h3 class="pro-item-title">
+                            소송 진행
+                        </h3>
+                        <p class="pro-item-desc">
+                            합의가 어려우면 소송까지 끝까지 함께 합니다.
+                        </p>
+                    </li>
+                </ul>
+                <a href="#" class="pro-btn open-chat">
+                    <span>내 사건 진단받기</span>
                     <span>→</span>
                 </a>
-                <a href="#" class="case-btn case-btn-AI open-chat">AI 상담 시작</a>
             </div>
-        </div>
-    </section>
-    <section class="footer-section">
+        </section>
+        <section class="faq-sec" id="faq">
+            <div class="inner faq-inner">
+                <!-- 왼쪽 -->
+                <div class="faq-content">
+                    <span class="faq-sub-title">FAQ</span>
+                    <h2 class="faq-title">자주 묻는 질문</h2>
+                    <p class="faq-desc">
+                        궁금한 점을 먼저 확인해 보세요. 더 자세한 내용은 상담으로 안내해 드립니다.
+                    </p>
+                    <div class="faq-call">
+                        <strong>Q&A</strong>
+                        <div class="faq-call-info">
+                            <span>상담문의</span>
+                            <p>02-4562-1687</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 오른쪽 -->
+                <div class="faq-list">
+                    <div class="faq-item active">
+                        <button class="faq-question">
+                            <span>
+                                <strong>Q</strong>
+                                상담 비용이 있나요?
+                            </span>
+                            <img src="img/arrow-bot.svg" alt="">
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                초기 상담은 무료로 진행됩니다. AI 사전 상담으로 상황을 정리한 뒤, 변호사가 사건을 검토하고 진행 방향과 비용을 투명하게 안내해 드립니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>
+                                <strong>Q</strong>
+                                보험사가 제시한 합의금,<br class="mobile-br">적정한지 알 수 있나요?
+                            </span>
+                            <img src="img/arrow-bot.svg" alt="">
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                가능합니다. 사고 내용과 치료기록 등을 검토하여 적정한 보상인지 확인해드립니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>
+                                <strong>Q</strong>
+                                사고 직후 바로 상담받아도 되나요?
+                            </span>
+                            <img src="img/arrow-bot.svg" alt="">
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                네. 사고 직후 상담할수록 증거 확보와 대응 전략 수립에 도움이 됩니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="location-sec" id="location">
+            <div class="inner">
+                <!-- 왼쪽 -->
+                    <div class="location-title-wrap">
+                        <span class="location-sub-title">
+                            LOCATION
+                        </span>
+                        <h2 class="location-title">
+                            오시는 길
+                        </h2>
+                    </div>
+                    <div class="location-inner">
+                        <div class="location-map">
+                            <img src="img/map.png" alt="오시는 길">
+                        </div>
+                            <!-- 오른쪽 -->
+                            <div class="location-info">
+                                <div class="location-item">
+                                    <span class="location-label">주소</span>
+                                    <div class="location-text">
+                                        <p>서울특별시 동작구 노량진로 116</p>
+                                        <p>백이빌딩 5층 (노량진역 인근)</p>
+                                    </div>
+                                </div>
+                                <div class="location-item">
+                                    <span class="location-label">상담시간</span>
+                                    <div class="location-text">
+                                        <p>평일 09:00 ~ 20:00</p>
+                                        <p>야간 · 주말 상담 가능 (예약제)</p>
+                                        <p>비대면 상담 가능</p>
+                                    </div>
+                                </div>
+                                <div class="location-item">
+                                    <span class="location-label">전화</span>
+                                    <div class="location-text">
+                                        <p>02-4562-1687</p>
+                                    </div>
+                                </div>
+                                <div class="location-item">
+                                    <span class="location-label">교통</span>
+                                    <div class="location-text">
+                                        <p>노량진역 6번 출구 도보 3분</p>
+                                        <p>건물 내 주차 가능</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </section>
+        <section class="case-sec">
+            <div class="inner case-inner">
+                <span class="case-sub-title">
+                    START YOUR CASE
+                </span>
+                <h2 class="case-title">
+                    사고 이후, 가장 먼저 변호사와 상담하세요.
+                </h2>
+                <p class="case-desc">
+                    무료 상담으로 내 사건의 보상 방향을 확인해 보세요.<br>
+                    AI 챗봇으로 부담 없이 먼저 시작하셔도 좋습니다.
+                </p>
+                <div class="case-btn-wrap">
+                    <!-- <a href="#" class="case-btn case-btn-free open-chat">
+                        <span>무료 상담 시작하기</span>
+                        <span>→</span>
+                    </a> -->
+                    <a href="#" class="case-btn case-btn-AI open-chat">AI 상담 시작</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-section">
         <div class="inner footer-inner">
             <!-- 로고 -->
                 <div class="footer-brand">
@@ -636,7 +585,7 @@
                 <span>사업자등록번호 123-45-67890 · 대표변호사 이강준</span>
             </div>
         </div>
-    </section>
+    </footer>
     <!-- chatbot -->
     <div class="chatbot-wrap">
         <button class="chat-toggle">
@@ -649,54 +598,108 @@
         <img src="img/top-button.svg" alt="맨 위로">
     </button>
     <script>
-        const chatToggle = document.querySelector(".chat-toggle");
-        const chatWindow = document.querySelector(".chat-window");
+        // menu script
+            const menuBtn = document.querySelector(".menu-btn");
+            const gnb = document.querySelector(".gnb");
 
-        function openChat() {
-            chatToggle.classList.add("active");
-            chatWindow.classList.add("active");
-        }
+            menuBtn.addEventListener("click", () => {
+                menuBtn.classList.toggle("is-open");
+                gnb.classList.toggle("is-open");
 
-        function closeChat() {
-            chatToggle.classList.remove("active");
-            chatWindow.classList.remove("active");
-        }
+                if(menuBtn.classList.contains("is-open")) {
+                console.log("열려있어!")
+                }   else {
+                console.log("닫혀있어!")
+                }
+            })
+            
+            const gnbLink = document.querySelectorAll(".gnb a");
+            gnbLink.forEach((link) => {
+                link.addEventListener("click",() =>{
+                    menuBtn.classList.remove("is-open");
+                    gnb.classList.remove("is-open");
+                })
+            })
 
-        chatToggle.addEventListener("click", () => {
-            if(chatWindow.classList.contains("active")){
-                closeChat();
-                    }else{
-                        openChat();
+        // foryou script
+            const items = document.querySelectorAll('.item');
+                let currentIndex = 4; // item05(인덱스 4)에서 시작
+
+                setInterval(() => {
+                    // 현재 active 제거
+                    items[currentIndex].classList.remove('active');
+                    
+                    // 다음 인덱스 계산 (순환)
+                    currentIndex = (currentIndex + 1) % items.length;
+                    
+                    // 새로운 active 추가
+                    items[currentIndex].classList.add('active');
+                }, 2000);
+        
+        // faq script
+            const faqItems = document.querySelectorAll(".faq-item");
+
+                faqItems.forEach(item => {
+                    const btn = item.querySelector(".faq-question");
+                    btn.addEventListener("click",()=>{
+                        faqItems.forEach(el=>{
+                            if(el !== item){
+                                el.classList.remove("active");
+                            }
+                        });
+                        item.classList.toggle("active");
+                    });
+                });
+        
+        // chatbot script
+            const chatToggle = document.querySelector(".chat-toggle");
+            const chatWindow = document.querySelector(".chat-window");
+
+            function openChat() {
+                chatToggle.classList.add("active");
+                chatWindow.classList.add("active");
             }
-        });
-    </script>
-    <script>
-        const openChatBtns = document.querySelectorAll(".open-chat");
 
-        openChatBtns.forEach(btn => {
-            btn.addEventListener("click",(e)=>{
-                e.preventDefault();
-                 openChat();
+            function closeChat() {
+                chatToggle.classList.remove("active");
+                chatWindow.classList.remove("active");
+            }
+
+            chatToggle.addEventListener("click", () => {
+                if(chatWindow.classList.contains("active")){
+                    closeChat();
+                        }else{
+                            openChat();
+                }
             });
-        });
-    </script>
-    <script>
-        const topBtn = document.querySelector(".top-btn");
+        
+        // cta button -> chatbot open script
+            const openChatBtns = document.querySelectorAll(".open-chat");
 
-        window.addEventListener("scroll", () => {
-        if (window.scrollY > 400) {
-        topBtn.classList.add("show");
-        } else {
-        topBtn.classList.remove("show");
-        }
-    });
+            openChatBtns.forEach(btn => {
+                btn.addEventListener("click",(e)=>{
+                    e.preventDefault();
+                    openChat();
+                });
+            });
+        
+        // top button script
+            const topBtn = document.querySelector(".top-btn");
 
-        topBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 400) {
+                topBtn.classList.add("show");
+                } else {
+                topBtn.classList.remove("show");
+                }
+            });
+
+            topBtn.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
     </script>
 </body>
 </html>
