@@ -1311,7 +1311,7 @@ header .inner{
     font-size:14px;
     font-weight:500;
 }
-@media(max-width:1280px) {
+@media (max-width:1280px) {
     .team-sub-title{
         margin-bottom: 14px;
         font-size: 12px;
@@ -1338,6 +1338,11 @@ header .inner{
 @media (max-width: 480px) {
     .team-sec {
         padding-bottom: 48%;
+    }
+}
+@media (max-width: 390px) {
+    .team-tag span {
+        padding: 0 10px;
     }
 }
 
