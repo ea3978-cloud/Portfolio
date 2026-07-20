@@ -315,7 +315,7 @@ header .inner{
     font-weight: 600;
     transition: 0.3s;
 }
-.btn-gold {
+/* .btn-gold {
     background-color: #c9a24e;
     color: #1a1a1e;
     gap: 10px;
@@ -323,7 +323,7 @@ header .inner{
 .btn-gold:hover {
     background-color: #1a1a1e;
     color: #f4f4f1;
-}
+} */
 .btn-dark {
     background-color: #221f17;
     border: 1px solid #3a331f;
@@ -2153,7 +2153,7 @@ header .inner{
     text-decoration: none;
     transition: 0.3s;
 }
-.case-btn-free {
+/* .case-btn-free {
     background-color: #c9a24e;
     color: #1a1a1e;
     gap: 10px;
@@ -2161,7 +2161,7 @@ header .inner{
 .case-btn-free:hover {
     background-color: #1a1a1e;
     color: #f4f4f1;
-}
+} */
 .case-btn-AI {
     border: 1px solid #3a331f;
     background-color: #221f17;
