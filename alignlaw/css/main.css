@@ -1340,9 +1340,9 @@ header .inner{
         padding-bottom: 48%;
     }
 }
-@media (max-width: 390px) {
+@media (max-width: 360px) {
     .team-tag span {
-        padding: 0 10px;
+        padding: 0 8px;
     }
 }
 
